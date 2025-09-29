@@ -3,11 +3,11 @@
 title: 정진영
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+# name_pronunciation: Jung JinYoung
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Jung
+last_name: JinYoung
 
 # Pronouns (optional)
 pronouns: she/her
