@@ -3,7 +3,7 @@
 title: 정진영
 
 # Name pronunciation (optional)
-# name_pronunciation: Jung JinYoung
+name_pronunciation: Jung JinYoung
 
 # Full name (for SEO)
 first_name: Jung
