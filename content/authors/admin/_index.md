@@ -10,7 +10,7 @@ first_name: Jung
 last_name: JinYoung
 
 # Pronouns (optional)
-pronouns: she/her
+# pronouns: she/her
 
 # Status emoji
 status:
@@ -20,7 +20,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Director of Cloud Infrastructure
+role: 전북대학교 컴퓨터인공지능학부
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
