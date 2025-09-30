@@ -37,7 +37,7 @@ profiles:
   - icon: brands/github
     url: https://github.com/wlsdudwjd
 
-  - icon: boj
+  - icon: boj.png
     url: https://www.acmicpc.net/user/jjyabc11
 
   - icon: brands/linkedin
