@@ -20,7 +20,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 전북대학교 컴퓨터인공지능학부
+role: 학부생 / 3학년
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
