@@ -33,10 +33,10 @@ profiles:
   - icon: at-symbol
     url: 'mailto:jjyabc11@jbnu.ac.kr'
     label: 학교 이메일입니다.
-  - icon: brands/x
-    url: https://x.com/BuildLore
+
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/wlsdudwjd
+    
   - icon: brands/linkedin
     url: https://www.linkedin.com/
   - icon: brands/instagram
