@@ -37,6 +37,9 @@ profiles:
   - icon: brands/github
     url: https://github.com/wlsdudwjd
 
+  - icon: brands/baekjoon
+    url: https://www.acmicpc.net/user/jjyabc11
+
   - icon: brands/linkedin
     url: https://www.linkedin.com/
   - icon: brands/instagram
