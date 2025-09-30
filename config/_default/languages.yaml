@@ -10,7 +10,7 @@ en:
 
 ko:
   languageCode: ko
-  contentDir: contnet/ko
+  contentDir: content/ko
 
 # Uncomment the lines below to configure your website in a second language.
 #zh:
