@@ -31,8 +31,8 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
-    label: E-mail Me
+    url: 'jjyabc11@jbnu.ac.kr'
+    label: 학교 이메일입니다.
   - icon: brands/x
     url: https://x.com/BuildLore
   - icon: brands/github
