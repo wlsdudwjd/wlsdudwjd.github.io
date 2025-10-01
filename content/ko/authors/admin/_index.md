@@ -30,7 +30,7 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
+  - icon: hero/envelope
     url: 'mailto:jjyabc11@jbnu.ac.kr'
 
   - icon: brands/github
@@ -38,9 +38,6 @@ profiles:
 
   - icon: brands/discord
     url: https://www.discord.com/users/516498233112002560
-
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
 
   - icon: brands/instagram
     url: https://www.instagram.com/
