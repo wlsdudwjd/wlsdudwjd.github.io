@@ -30,7 +30,8 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: "custom/envelope-regular-full"
+  - icon: envelope-regular-full
+    icon_pack: custom
     url: 'mailto:jjyabc11@jbnu.ac.kr'
 
   - icon: brands/github
