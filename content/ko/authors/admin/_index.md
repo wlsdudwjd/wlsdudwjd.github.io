@@ -13,8 +13,8 @@ last_name: JinYoung
 # pronouns: she/her
 
 # Status emoji
-status:
-  icon: ☕️
+# status:
+#  icon: ☕️
 
 # Is this the primary user of the site?
 superuser: true
@@ -30,7 +30,7 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: envelope-regular-full
+  - icon: mail
     icon_pack: fas
     url: 'mailto:jjyabc11@jbnu.ac.kr'
 
