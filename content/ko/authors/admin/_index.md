@@ -39,9 +39,6 @@ profiles:
   - icon: brands/discord
     url: https://www.discord.com/users/516498233112002560
 
-  - icon: brands/instagram
-    url: https://www.instagram.com/
-
 education:
   - area: 컴퓨터인공지능학부
     institution: 전북대학교
@@ -50,7 +47,7 @@ education:
     summary: |
       학점: 4.3/4.5
 
-      2021학년도에 입학하여 2025년 현재 컴퓨터인공지능학부 3학년에 재학중에 있음.
+      2021학년도에 입학하여 2025년 현재 컴퓨터인공지능학부 3학년에 재학중입니다.
 
     #   Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
     # button:
