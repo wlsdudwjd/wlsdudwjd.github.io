@@ -31,8 +31,8 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: regular/envelope
+    icon_pack: fab
     url: 'mailto:jjyabc11@jbnu.ac.kr'
-    label: 학교 이메일입니다.
 
   - icon: brands/github
     url: https://github.com/wlsdudwjd
