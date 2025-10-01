@@ -30,7 +30,7 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: mail
+  - icon: "custom/mail"
     url: 'mailto:jjyabc11@jbnu.ac.kr'
 
   - icon: brands/github
