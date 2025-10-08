@@ -1,20 +1,20 @@
 ---
 # Display name
-title: Alex Johnson
+title: 정진영
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Jung
+last_name: Jinyoung
 
 # Pronouns (optional)
-pronouns: he/him
+# pronouns: he/him
 
 # Status emoji
-status:
-  icon: 🚀
+# status:
+#   icon: 🚀
 
 # Is this the primary user of the site?
 superuser: true
