@@ -141,9 +141,11 @@ skills:
         icon: book-open
 
 languages:
-  - name: English
+  - name: 한국어
     percent: 100
-  - name: Spanish
+  - name: English
+    percent: 80
+  - name: 日本語
     percent: 50
 
 # Awards.
