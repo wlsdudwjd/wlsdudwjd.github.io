@@ -154,7 +154,7 @@ languages:
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
   - title: 성적우수총장상
-    date: '2021'
+    date: '2022-01'
     awarder: 전북대학교
     icon: hero/trophy
     summary: |
