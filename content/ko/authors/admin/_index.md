@@ -154,7 +154,7 @@ languages:
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
   - title: 성적우수총장상
-    date: '2022-01'
+    date: '2022-01-01'
     awarder: 전북대학교
     icon: hero/trophy
     summary: |
@@ -171,7 +171,6 @@ awards:
     icon: hero/academic-cap
     summary: |
       2025년 1학기, 최우수 성적(1등)으로 전액 장학생 선발
-
 ---
 
 안녕하세요 컴퓨터인공지능학부 3학년에 재학중인 정진영입니다.
