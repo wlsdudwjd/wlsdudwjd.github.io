@@ -41,7 +41,7 @@ profiles:
   - icon: brands/github
     url: https://github.com/wlsdudwjd
   - icon: brands/discord
-    url: https:/discord/com/users/516498233112002560
+    url: https://discord.com/users/516498233112002560
   # - icon: academicons/google-scholar
   #   url: https://scholar.google.com/citations?user=alexjohnson
   # - icon: academicons/orcid
