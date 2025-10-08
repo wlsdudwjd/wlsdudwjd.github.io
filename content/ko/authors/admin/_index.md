@@ -153,27 +153,25 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
+  - title: 성적우수총장상
+    date: '2021'
+    awarder: 전북대학교
     icon: hero/trophy
     summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
+      2021년 1학년 전제, 수석으로 마쳐 성적우수총장상을 수혜
+  - title: SW전공 J-Point 장학생
+    date: '2025-07-14'
+    awarder: 전북대학교 SW중심대학사업단
     icon: hero/academic-cap
     summary: |
-      Recognized for contributions to scaling laws in deep learning.
+      2025학년도 상반기 SW중심대학사업단 SW전공 J-Point 장려학생 선발
+  - title: 2025년 2학기 전액장학
+    date: '2025-09-01'
+    awarder: 전북대학교
+    icon: hero/academic-cap
+    summary: |
+      2025년 1학기, 최우수 성적(1등)으로 전액 장학생 선발
+
 ---
 
 안녕하세요 컴퓨터인공지능학부 3학년에 재학중인 정진영입니다.
