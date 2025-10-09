@@ -16,7 +16,7 @@ sections:
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download CV
+        text: 이력서 보기
         url: uploads/resume.pdf
       headings:
         about: ''
