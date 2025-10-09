@@ -111,18 +111,18 @@ work:
 skills:
   - name: Technical Skills
     items:
-      - name: Python & PyTorch
+      - name: Java
         description: ''
-        percent: 95
-        icon: code-bracket
-      - name: Machine Learning
+        percent: 90
+        icon: assets\media\icons\java.svg
+      - name: Python
         description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
+        percent: 80
+        icon: assets\media\icons\python.svg
+      - name: C, C++
         description: ''
-        percent: 85
-        icon: cloud
+        percent: 80
+        icon: assets\media\icons\c.svg
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
