@@ -89,22 +89,22 @@ education:
   #     Minored in Mathematics. President of AI Club.
 
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
+  - position: 제2대 컴퓨터인공지능학부 학생회
+    company_name: 기획부
     company_url: 'https://ai.meta.com/'
     company_logo: ''
-    date_start: 2020-01-01
-    date_end: ''
+    date_start: 2024-03-02
+    date_end: '2024-11-01'
     summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
+      컴퓨터인공지능학부 기획부원으로서 1년간 다양한 행사 기획과 운영을 맡아 학교 분위기 활성화에 기여함
+  - position: 전북대 컴퓨터인공지능학부 학술동아리
+    company_name: 자비스(JAVICE)
+    company_url: 'https://javice-jbnu.github.io/homepage/'
     company_logo: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
+    date_start: 2025-05-01
+    date_end: 
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      컴퓨터인공지능학부 과동아리 부원으로서 현재는 동방 관리 운영진을 맡고 있음
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
