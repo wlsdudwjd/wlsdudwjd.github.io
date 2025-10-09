@@ -114,15 +114,15 @@ skills:
       - name: Java
         description: ''
         percent: 90
-        icon: assets\media\icons\java.svg
+        icon: java.svg
       - name: Python
         description: ''
         percent: 80
-        icon: assets\media\icons\python.svg
+        icon: python.svg
       - name: C, C++
         description: ''
         percent: 80
-        icon: assets\media\icons\c.svg
+        icon: c.svg
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
