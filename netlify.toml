@@ -18,8 +18,7 @@
     
     echo "=== Build completed successfully ==="
   """
-  command = "hugo --gc --minify -b $URL && npx pagefind --source 'public'"
-  publish = "public"
+    publish = "public"
 
 [build.environment]
   HUGO_VERSION = "0.150.1"

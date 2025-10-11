@@ -83,8 +83,7 @@ skills:
       - name: 자바
         description: ''
         percent: 90
-        icon: java
-        icon_pack: fab
+        icon: 'java.svg'
       - name: 파이썬
         description: ''
         percent: 80
@@ -93,7 +92,7 @@ skills:
       - name: C, C++
         description: ''
         percent: 80
-        icon: 'custom/c'
+        icon: 'c.svg'
   - name: 취미
     color: '#eeac02'
     color_border: '#f0bf23'
