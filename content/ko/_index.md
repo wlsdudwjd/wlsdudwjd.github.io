@@ -28,43 +28,15 @@ sections:
       # Avatar customization
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
-
-  # - block: slider
-  #   content:
-  #     slides:
-  #     - title: <span style="font-size:90%">테스트1</span>
-  #       content: <span style="font-size:90%">Test1</span>
-  #       align: center
-  #       background:
-  #         image:
-  #             filename: image1.jpg
-  #         position: center
-
-  #     - title: <span style="font-size:90%">테스트2</span>
-  #       content: <span style="font-size:90%">Test2</span>
-  #       align: center
-  #       background:
-  #         image:
-  #             filename: image2.jpg
-  #         position: center
-
-  #       design:
-  #       slide_height: ''
-  #       is_fullscreen: false
-  #       loop: true
-  #       interval: 2000
+        shape: circle # Options: circle (default), square, roundedx
     
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: '📚 현재 공부중'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
+        현재 Backend 개발을 위해 Spring-boot를 공부하고 있습니다!
+        자바도~~~~ 😃
     design:
       columns: '1'
   - block: collection
