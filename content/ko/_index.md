@@ -35,7 +35,7 @@ sections:
       slides:
 
       - title: <span style="font-size:90%">테스트1</span>
-          content: <span style="font-size:90%">Test1</span>
+        content: <span style="font-size:90%">Test1</span>
         align: center
         background:
           image:
