@@ -60,5 +60,9 @@ features:
   privacy_pack:
     enable: false
   search:
-    provider: pagefind
-    pagefind:
+    provider: algolia
+    algolia:
+      app_id: 'ORRODRDIYL'
+      api_key: 'aa5d235789c043357aea59ee2bd0093c'
+      index_name: 'myPortfolio'
+      show_logo: true
