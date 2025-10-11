@@ -11,10 +11,10 @@ weight: 15
 
 # 위젯 설정 (여기서 이미지 목록을 관리합니다.)
 slides:
-  - image: "image1.jpg"
+  - filename: image1.jpg
     caption: "첫 번째 프로젝트"
-  - image: "image2.jpg"
+  - filename: image2.jpg
     caption: "두 번째 프로젝트"
-  - image: "image3.jpg"
+  - filename: image3.jpg
     caption: "세 번째 프로젝트"
 ---
