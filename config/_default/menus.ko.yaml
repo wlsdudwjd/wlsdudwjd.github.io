@@ -4,7 +4,7 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Bio
+  - name: 소개
     url: /
     weight: 10
   # - name: Papers
@@ -29,7 +29,7 @@ main:
     identifier: contact
     url: contact/
     weight: 50
-  - name: 연락
+  - name: 연락처
     parent: contact
     url: contact/contact/
     weight: 51

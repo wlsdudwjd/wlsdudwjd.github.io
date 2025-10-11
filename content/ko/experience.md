@@ -1,5 +1,5 @@
 ---
-title: '경력'
+title: 소속
 date: 2023-10-24
 type: landing
 
