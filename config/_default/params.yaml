@@ -62,5 +62,3 @@ features:
   search:
     provider: wowchemy
     wowchemy:
-      min_length: 1
-      threshold: 0.3
