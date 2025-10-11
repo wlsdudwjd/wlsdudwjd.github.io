@@ -40,7 +40,7 @@ profiles:
   - icon: brands/github
     icon_pack: fab
     url: https://github.com/wlsdudwjd
-  - icon: discord
+  - icon: brands/discord
     icon_pack: fab
     url: https://discord.com/users/516498233112002560
 
@@ -101,11 +101,11 @@ skills:
         description: ''
         percent: 100
         icon: person-simple-walk
-      - name: Building Custom PCs
+      - name: 코딩
         description: ''
         percent: 90
         icon: cpu-chip
-      - name: Sci-Fi Reading
+      - name: 산책
         description: ''
         percent: 70
         icon: book-open
