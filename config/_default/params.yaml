@@ -31,12 +31,13 @@ header:
   navbar:
     enable: true
     block: 'navbar'
+    align: 'left'
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true
     logo:
       #text: '정진영의 포트폴리오'
-      image: 'icon.png'
+      image: 'jung.svg'
 
 # Site footer
 footer:
