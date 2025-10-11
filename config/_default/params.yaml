@@ -35,7 +35,8 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: '정진영의 포트폴리오'
+      #text: '정진영의 포트폴리오'
+      image: 'icon.png'
 
 # Site footer
 footer:
