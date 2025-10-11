@@ -24,6 +24,7 @@ sections:
                 filename: image2.jpg
 
             position: center
+---
 
                 
 
