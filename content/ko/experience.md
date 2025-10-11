@@ -1,5 +1,5 @@
 ---
-title: 'Experience'
+title: '경력'
 date: 2023-10-24
 type: landing
 
@@ -20,16 +20,16 @@ sections:
       is_education_first: false
   - block: resume-skills
     content:
-      title: Skills & Hobbies
+      title: 기술 및 취미
       username: admin
     design:
       show_skill_percentage: false
   - block: resume-awards
     content:
-      title: Awards
+      title: 수상 및 자격증
       username: admin
   - block: resume-languages
     content:
-      title: Languages
+      title: 언어
       username: admin
 ---
