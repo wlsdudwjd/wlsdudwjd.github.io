@@ -29,6 +29,30 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+
+  - block: slider
+    content:
+      slides:
+
+      - title: <span style="font-size:90%">테스트1</span>
+          content: <span style="font-size:90%">Test1</span>
+        align: center
+        background:
+          image:
+              filename: image1.jpg
+          
+          position: center
+
+      - title: <span style="font-size:90%">테스트2</span>
+        content: <span style="font-size:90%">Test2</span>
+        align: center
+        background:
+          image:
+              filename: image2.jpg
+
+          position: center
+
+    
   - block: markdown
     content:
       title: '📚 My Research'
