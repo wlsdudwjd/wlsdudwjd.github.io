@@ -59,7 +59,8 @@ features:
     enable: false
   privacy_pack:
     enable: false
-  map:
-    provider: 'openstreetmap'
-    api_key: ''
-    zoom: 15
+  search:
+    provider: 'pagefind'
+    pagefind:
+      min_length: 1
+      threshold: 0.3
