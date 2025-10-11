@@ -12,18 +12,19 @@ design:
 sections:
   - block: resume-experience
     content:
+      title: 소속
       username: admin
     design:
       # Hugo date format
       date_format: 'January 2006'
       # Education or Experience section first?
-      is_education_first: false
+      is_education_first: true
   - block: resume-skills
     content:
       title: 기술 및 취미
       username: admin
     design:
-      show_skill_percentage: false
+      show_skill_percentage: true
   - block: resume-awards
     content:
       title: 수상 및 자격증
