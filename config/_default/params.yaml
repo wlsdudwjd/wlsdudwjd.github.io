@@ -60,7 +60,7 @@ features:
   privacy_pack:
     enable: false
   search:
-    provider: 'pagefind'
+    provider: pagefind
     pagefind:
       min_length: 1
       threshold: 0.3
