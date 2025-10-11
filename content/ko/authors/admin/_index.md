@@ -33,19 +33,16 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
+  - icon: envelope
+    icon_pack: fas
     url: 'mailto:jjyabc11@jbnu.ac.kr'
     label: E-mail Me
-  # - icon: brands/x
-  #   url: https://twitter.com/AlexAIResearch
   - icon: brands/github
+    icon_pack: fab
     url: https://github.com/wlsdudwjd
-  - icon: brands/discord
+  - icon: discord
+    icon_pack: fab
     url: https://discord.com/users/516498233112002560
-  # - icon: academicons/google-scholar
-  #   url: https://scholar.google.com/citations?user=alexjohnson
-  # - icon: academicons/orcid
-  #   url: https://orcid.org/0000-0002-1825-0097
 
 interests:
   - Backend
@@ -60,33 +57,6 @@ education:
     date_start: 2021-03-02
     summary: |
       학점: 4.3/4/5
-
-      2024년 제2회 컴퓨터인공지능학부 학생회 기획부
-  # - area: PhD Computer Science (AI Focus)
-  #   institution: Stanford University
-  #   date_start: 2015-09-01
-  #   date_end: 2019-06-30
-  #   summary: |
-  #     Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-  #   button:
-  #     text: 'Read Thesis'
-  #     url: 'https://example.com/thesis.pdf'
-  # - area: MS Computer Science
-  #   institution: Carnegie Mellon University
-  #   date_start: 2013-09-01
-  #   date_end: 2015-05-31
-  #   summary: |
-  #     GPA: 4.0/4.0
-
-  #     Specialized in machine learning and robotics.
-  # - area: BS Computer Science
-  #   institution: MIT
-  #   date_start: 2009-09-01
-  #   date_end: 2013-05-31
-  #   summary: |
-  #     GPA: 3.9/4.0
-
-  #     Minored in Mathematics. President of AI Club.
 
 work:
   - position: 제2대 컴퓨터인공지능학부 학생회
@@ -111,25 +81,27 @@ work:
 skills:
   - name: Technical Skills
     items:
-      - name: Java
+      - name: 자바
         description: ''
         percent: 90
-        icon: 'assets/media/icons/java'
-      - name: Python
+        icon: java
+        icon_pack: fab
+      - name: 파이썬
         description: ''
         percent: 80
-        icon: brand/python
+        icon: python
+        icon_pack: fab
       - name: C, C++
         description: ''
         percent: 80
-        icon: 'assets/media/icons/c.svg'
-  - name: Hobbies
+        icon: 'custom/c'
+  - name: 취미
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking in the Rockies
+      - name: 게임
         description: ''
-        percent: 80
+        percent: 100
         icon: person-simple-walk
       - name: Building Custom PCs
         description: ''
