@@ -131,6 +131,12 @@ awards:
     icon: hero/trophy
     summary: |
       2021년 1학년 전제, 수석으로 마쳐 성적우수총장상을 수혜
+  - title: TOPCIT(소프트웨어 역량 검정)
+    date: '2025-05-24'
+    awarder: 과학기술정보통신부, 정보통신기획평가원
+    icon: hero/trophy
+    summary: |
+      2025년 5월에 실시한 23회 정기평가에서 498점 취득
   - title: SW전공 J-Point 장학생
     date: '2025-07-14'
     awarder: 전북대학교 SW중심대학사업단
