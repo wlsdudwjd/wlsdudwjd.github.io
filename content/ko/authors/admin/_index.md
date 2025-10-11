@@ -61,7 +61,6 @@ education:
 work:
   - position: 제2대 컴퓨터인공지능학부 학생회
     company_name: 기획부
-    company_url: 'https://ai.meta.com/'
     company_logo: ''
     date_start: 2024-03-02
     date_end: '2024-11-01'
