@@ -60,9 +60,9 @@ features:
   privacy_pack:
     enable: false
   search:
-    provider: algolia
+    provider: wowchemy
     algolia:
-      app_id: 'ORRODRDIYL'
-      api_key: 'aa5d235789c043357aea59ee2bd0093c'
-      index_name: 'myPortfolio'
-      show_logo: true
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: false
