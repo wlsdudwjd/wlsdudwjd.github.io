@@ -1,12 +1,38 @@
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="/media/slider/image1.jpg" alt="이미지 1"></div>
-    <div class="swiper-slide"><img src="/media/slider/image2.jpg" alt="이미지 2"></div>
-    <div class="swiper-slide"><img src="/media/slider/image3.jpg" alt="이미지 3"></div>
-    ...
+<div class="slider">
+  <button class="prev">&#10094;</button>
+  <div class="slides">
+    <img src="/media/slider/image1.jpg" class="slide active">
+    <img src="/media/slider/image2.jpg" class="slide">
+    <img src="/media/slider/image3.jpg" class="slide">
   </div>
-  <div class="swiper-pagination"></div>
-
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <button class="next">&#10095;</button>
 </div>
+<style>
+.slider { position: relative; width: 100%; max-width: 600px; margin: auto; }
+.slides { position: relative; overflow: hidden; }
+.slide { display: none; width: 100%; }
+.slide.active { display: block; }
+.prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; font-size: 2em; cursor: pointer; }
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  function showSlide(idx) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === idx);
+    });
+  }
+  document.querySelector('.prev').onclick = () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  };
+  document.querySelector('.next').onclick = () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  };
+  showSlide(current);
+});
+</script>
