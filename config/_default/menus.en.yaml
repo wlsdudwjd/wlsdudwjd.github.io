@@ -16,7 +16,7 @@ main:
   # - name: News
   #   url: /#news
   #   weight: 13
-  - name: 경력
+  - name: experience
     url: experience/
     weight: 20
   - name: Projects
