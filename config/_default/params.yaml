@@ -36,7 +36,7 @@ header:
     show_theme_chooser: true
     logo:
       #text: '정진영의 포트폴리오'
-      filename: 'jung.svg'
+      filename: 'jung.png'
 
 # Site footer
 footer:

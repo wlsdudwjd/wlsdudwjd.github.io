@@ -14,11 +14,11 @@ sections:
     content:
       title: 소속
       username: admin
-    design:
-      # Hugo date format
-      date_format: 'January 2006'
-      # Education or Experience section first?
-      is_education_first: true
+    # design:
+    #   # Hugo date format
+    #   date_format: 'January 2006'
+    #   # Education or Experience section first?
+    #   is_education_first: true
   - block: resume-skills
     content:
       title: 기술 및 취미
