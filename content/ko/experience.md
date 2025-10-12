@@ -14,6 +14,8 @@ sections:
     content:
       title: 소속
       username: admin
+      headings:
+        experience: 소속
     # design:
     #   # Hugo date format
     #   date_format: 'January 2006'
@@ -24,7 +26,7 @@ sections:
       title: 기술 및 취미
       username: admin
     design:
-      show_skill_percentage: true
+      show_skill_percentage: false
   - block: resume-awards
     content:
       title: 수상 및 자격증
