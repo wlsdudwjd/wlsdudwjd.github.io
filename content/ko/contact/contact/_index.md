@@ -1,5 +1,5 @@
 ---
-title: My page
+title: 연락처
 type: landing
 
 sections:
