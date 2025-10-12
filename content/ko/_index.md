@@ -12,7 +12,7 @@ sections:
   - block: blank
     content:
       # layouts/partials/ 폴더에 있는 파일명을 적습니다.
-      partial: all_in_one_slider.html
+      partial: slider.html
     design:
       # 위아래 여백을 0으로 만들어 슬라이더가 꽉 차게 보이도록 합니다.
       spacing:
