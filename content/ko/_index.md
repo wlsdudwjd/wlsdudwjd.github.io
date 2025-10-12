@@ -10,8 +10,8 @@ design:
 
 sections:
   - block: resume-biography-3
-    title: 소개
     content:
+      title: 소개
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ''
