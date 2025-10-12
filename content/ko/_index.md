@@ -9,15 +9,6 @@ design:
   spacing: '6rem'
 
 sections:
-  - block: markdown
-    content:
-      # layouts/partials/ 폴더에 있는 파일명을 적습니다.
-      partial: slider.html
-    design:
-      # 위아래 여백을 0으로 만들어 슬라이더가 꽉 차게 보이도록 합니다.
-      spacing:
-        padding: [0, 0, 0, 0]
-
   - block: resume-biography-3
     content:
       title: 소개
@@ -35,7 +26,11 @@ sections:
         experience: '경력'
     design:
       # Apply a gradient background
-      css_class: hbx-bg-gradient
+      # css_class: hbx-bg-gradient
+        background:
+          gradient_start: "#000000ff"
+          gradient_end: "#ffffffff"
+          text_color_light: true
       # Avatar customization
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
