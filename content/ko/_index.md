@@ -85,7 +85,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Recent & Upcoming Talks
+      title: 뭐하지
       filters:
         folders:
           - events
