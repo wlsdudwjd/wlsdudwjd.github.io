@@ -40,6 +40,21 @@ sections:
         자바도~~~~ 😃
     design:
       columns: '1'
+
+  - block: features
+    content:
+      items:
+        - name: 인공지능(AI)
+          icon: code-branch
+          icon_pack: fas
+        - name: 백엔드
+          icon: globe
+          icon_pack: fas
+        - name: 프론트엔드
+          icon: calculator
+          icon_pack: fas
+    design:
+      columns: 3
   - block: collection
     id: papers
     content:
