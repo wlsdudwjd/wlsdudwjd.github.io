@@ -9,7 +9,7 @@ design:
   spacing: '6rem'
 
 sections:
-  - block: blank
+  - block: markdown
     content:
       # layouts/partials/ 폴더에 있는 파일명을 적습니다.
       partial: slider.html
