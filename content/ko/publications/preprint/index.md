@@ -1,18 +1,23 @@
 ---
 title: "JAVA"
+
 authors:
   - admin
+
 date: '2025-10-13T00:00:00Z'
+
 links:
   - type: site
     url: https://github.com/wlsdudwjd
+
 tags:
   - JAVA
 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%ED%99%94%EB%A9%B4%EC%97%90-%ED%91%9C%EC%8B%9C%EB%90%98%EB%8A%94-%EB%85%B8%EB%9E%80%EC%83%89-%EB%B0%8F-%ED%8C%8C%EB%9E%80%EC%83%89-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BD%94%EB%93%9C-70Rir5vB96U?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)'
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%ED%99%94%EB%A9%B4%EC%97%90-%ED%91%9C%EC%8B%9C%EB%90%98%EB%8A%94-%EB%85%B8%EB%9E%80%EC%83%89-%EB%B0%8F-%ED%8C%8C%EB%9E%80%EC%83%89-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BD%94%EB%93%9C-70Rir5vB96U)'
   focal_point: ""
   preview_only: false
+
 ---
 
 자바의 문법과 기능을 단순히 알기만 하는 것이 아니라, 그 기능이 왜 필요하고 어떻게 실무에 적용할 수 있는지에 대해 깊이 있게 탐구하기 위해 공부를 시작하였다.

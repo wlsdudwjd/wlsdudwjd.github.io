@@ -37,15 +37,15 @@ sections:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: square # Options: circle (default), square, roundedx
     
-  - block: markdown
-    content:
-      title: '📚 현재 공부중'
-      subtitle: ''
-      text: |-
-        현재 Backend 개발을 위해 Spring-boot를 공부하고 있습니다!
-        자바도~~~~ 😃
-    design:
-      columns: '1'
+  # - block: markdown
+  #   content:
+  #     title: '📚 현재 공부중'
+  #     subtitle: ''
+  #     text: |-
+  #       현재 Backend 개발을 위해 Spring-boot를 공부하고 있습니다!
+  #       자바도~~~~ 😃
+  #   design:
+  #     columns: '1'
   # - block: features
   #   content:
   #     title: 앞으로 공부 할 것
@@ -64,7 +64,7 @@ sections:
   - block: collection
     id: papers
     content:
-      title: 저는 지금 이것을 공부 하고 있어요
+      title: 📚저는 지금 이것을 공부 하고 있어요!!
       filters:
         folders:
           - publications
