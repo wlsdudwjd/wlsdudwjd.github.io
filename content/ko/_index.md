@@ -67,7 +67,7 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: 저는 지금 이걸 공부 하고 있어요
       filters:
         folders:
           - publications
