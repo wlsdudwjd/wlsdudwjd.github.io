@@ -61,8 +61,8 @@ features:
     enable: false
   search:
     provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
+    wowchemy:
+      enable: true
+      engine: pagefind
+      min_query_length: 3
+      max_results: 10
