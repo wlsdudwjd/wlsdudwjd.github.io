@@ -45,14 +45,17 @@ sections:
     content:
       items:
         - name: 인공지능(AI)
-          icon: code-branch
+          icon: code
           icon_pack: fas
+          desciption: 인공지능 공부
         - name: 백엔드
-          icon: globe
+          icon: server
           icon_pack: fas
+          desciption: 백엔드 공부
         - name: 프론트엔드
-          icon: calculator
+          icon: desktop
           icon_pack: fas
+          desciption: 프론트엔드 공부
     design:
       columns: 3
   - block: collection
