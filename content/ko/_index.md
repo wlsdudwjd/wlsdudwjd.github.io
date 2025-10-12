@@ -20,9 +20,10 @@ sections:
         text: 이력서 보기
         url: uploads/resume.pdf
       headings:
-        about: ''
+        about: '소개'
         education: ''
         interests: ''
+        experience: '경력'
     design:
       # Apply a gradient background
       css_class: hbx-bg-gradient
@@ -40,21 +41,21 @@ sections:
         자바도~~~~ 😃
     design:
       columns: '1'
-
   - block: features
     content:
+      title: 앞으로 공부 할 것
       items:
         - name: 인공지능(AI)
-          icon: custom/code
-          icon_pack: fas
+          icon: code
+          icon_pack: fa
           description: <span style="font-size:90%">인공지능 공부<span><br><br>
         - name: 백엔드
-          icon: custom/server
-          icon_pack: fas
+          icon: server
+          icon_pack: fa
           description: <span style="font-size:90%">백엔드 공부</span><br><br>
         - name: 프론트엔드
-          icon: custom/desktop
-          icon_pack: fas
+          icon: desktop
+          icon_pack: fa
           description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
     design:
       columns: 3
