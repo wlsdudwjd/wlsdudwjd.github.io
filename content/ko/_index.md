@@ -27,10 +27,11 @@ sections:
     design:
       # Apply a gradient background
       # css_class: hbx-bg-gradient
-        background:
-          gradient_start: "#000000ff"
-          gradient_end: "#ffffffff"
-          text_color_light: true
+      background:
+        gradient_start: "#ffffff"
+        gradient_end: "#000000"
+        text_color_light: true
+
       # Avatar customization
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
