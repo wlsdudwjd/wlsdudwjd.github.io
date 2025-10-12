@@ -1,0 +1,45 @@
+{{/* All-in-One SwiperJS Slider */}}
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<style>
+  /* 슬라이더의 기본 크기와 여백을 설정합니다. */
+  .all-in-one-swiper-container {
+    width: 100%;
+    max-width: 900px; /* 슬라이더 최대 너비 */
+    margin: 40px auto; /* 위아래, 좌우 여백 */
+    padding: 0 15px;
+  }
+</style>
+
+<div class="all-in-one-swiper-container">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/media/slider/image1.jpg" alt="이미지 1" style="width:100%;"></div>
+      <div class="swiper-slide"><img src="/media/slider/image2.jpg" alt="이미지 2" style="width:100%;"></div>
+      <div class="swiper-slide"><img src="/media/slider/image3.jpg" alt="이미지 3" style="width:100%;"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  // 이 슬라이더를 바로 실행시킵니다.
+  new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 2500, // 2.5초마다 자동으로 넘어감
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
