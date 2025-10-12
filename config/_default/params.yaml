@@ -60,9 +60,5 @@ features:
   privacy_pack:
     enable: false
   search:
-    provider: wowchemy
-    wowchemy:
-      enable: true
-      engine: pagefind
-      min_query_length: 3
-      max_results: 10
+    provider: pagefind
+    enable: true
