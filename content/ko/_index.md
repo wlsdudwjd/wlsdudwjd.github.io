@@ -46,21 +46,21 @@ sections:
         자바도~~~~ 😃
     design:
       columns: '1'
-  - block: features
-    content:
-      title: 앞으로 공부 할 것
-      items:
-        - name: 인공지능(AI)
-          icon: hero/code-bracket
-          description: <span style="font-size:90%">인공지능 공부<span><br><br>
-        - name: 백엔드
-          icon: hero/server-stack
-          description: <span style="font-size:90%">백엔드 공부</span><br><br>
-        - name: 프론트엔드
-          icon: hero/computer-desktop
-          description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
-    design:
-      columns: 3
+  # - block: features
+  #   content:
+  #     title: 앞으로 공부 할 것
+  #     items:
+  #       - name: 인공지능(AI)
+  #         icon: hero/code-bracket
+  #         description: <span style="font-size:90%">인공지능 공부<span><br><br>
+  #       - name: 백엔드
+  #         icon: hero/server-stack
+  #         description: <span style="font-size:90%">백엔드 공부</span><br><br>
+  #       - name: 프론트엔드
+  #         icon: hero/computer-desktop
+  #         description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
+  #   design:
+  #     columns: 3
   - block: collection
     id: papers
     content:
@@ -71,7 +71,7 @@ sections:
         featured_only: false
     design:
       view: article-grid
-      columns: 2
+      columns: 3
   # - block: collection
   #   content:
   #     title: Recent Publications
