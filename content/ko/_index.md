@@ -28,8 +28,8 @@ sections:
       # Apply a gradient background
       # css_class: hbx-bg-gradient
       background:
-        gradient_start: "#ffffff"
-        gradient_end: "#000000"
+        gradient_start: "#1A1748"
+        gradient_end: "#C30452"
         text_color_light: true
 
       # Avatar customization
