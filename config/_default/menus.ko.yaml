@@ -17,17 +17,14 @@ main:
   #   url: /#news
   #   weight: 13
 
-  - name: 테스트
-    url: publications/
-    weight: 15
+  - name: 학습
+    url: studying/
+    weight: 20
   - name: 경력
     url: experience/
-    weight: 20
+    weight: 30
   - name: 프로젝트
     url: projects/
-    weight: 30
-  - name: Courses
-    url: courses/
     weight: 40
   - name: 연락
     identifier: contact
