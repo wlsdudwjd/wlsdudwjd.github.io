@@ -47,15 +47,15 @@ sections:
         - name: 인공지능(AI)
           icon: code
           icon_pack: fas
-          desciption: <span style="font-size:90%">인공지능 공부<span><br><br>
+          description: <span style="font-size:90%">인공지능 공부<span><br><br>
         - name: 백엔드
           icon: server
           icon_pack: fas
-          desciption: <span style="font-size:90%">백엔드 공부</span><br><br>
+          description: <span style="font-size:90%">백엔드 공부</span><br><br>
         - name: 프론트엔드
           icon: desktop
           icon_pack: fas
-          desciption: <span style="font-size:90%">프론트엔드 공부<span><br><br>
+          description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
     design:
       columns: 3
   - block: collection
