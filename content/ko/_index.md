@@ -45,15 +45,15 @@ sections:
     content:
       items:
         - name: 인공지능(AI)
-          icon: code
+          icon: custom/code
           icon_pack: fas
           description: <span style="font-size:90%">인공지능 공부<span><br><br>
         - name: 백엔드
-          icon: server
+          icon: custom/server
           icon_pack: fas
           description: <span style="font-size:90%">백엔드 공부</span><br><br>
         - name: 프론트엔드
-          icon: desktop
+          icon: custom/desktop
           icon_pack: fas
           description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
     design:
