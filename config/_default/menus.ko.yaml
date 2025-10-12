@@ -18,7 +18,7 @@ main:
   #   weight: 13
 
   - name: 테스트
-    url: slides/
+    url: publications/
     weight: 15
   - name: 경력
     url: experience/
