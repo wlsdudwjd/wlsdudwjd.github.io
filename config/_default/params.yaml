@@ -60,5 +60,4 @@ features:
   privacy_pack:
     enable: false
   search:
-    provider: pagefind
-    enable: true
+    provider: wowchemy
