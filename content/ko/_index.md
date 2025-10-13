@@ -30,7 +30,7 @@ sections:
       background:
         gradient_start: "#1A1748"
         gradient_end: "#C30452"
-        text_color_light: true
+        text_color_light: false
 
       # Avatar customization
       avatar:
