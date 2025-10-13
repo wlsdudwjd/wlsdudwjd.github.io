@@ -61,6 +61,14 @@ sections:
   #         description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
   #   design:
   #     columns: 3
+  - block: markdown
+    content:
+      title: ''
+      text: '{{< slider >}}'
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+
   - block: collection
     id: papers
     content:

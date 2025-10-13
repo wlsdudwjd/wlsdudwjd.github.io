@@ -1,45 +1,101 @@
-{{/* All-in-One SwiperJS Slider */}}
+<link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+<script defer src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<section class="hb-slider-wrap">
+  <div class="swiper hb-swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
 <style>
-  /* 슬라이더의 기본 크기와 여백을 설정합니다. */
-  .all-in-one-swiper-container {
+  :root {
+    --slider-nav-color: #e5e7eb;
+    --slider-bg-color: #000;
+  }
+  .hb-slider-wrap {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background: var(--slider-bg-color);
+  }
+  .hb-swiper {
     width: 100%;
-    max-width: 900px; /* 슬라이더 최대 너비 */
-    margin: 40px auto; /* 위아래, 좌우 여백 */
-    padding: 0 15px;
+    height: clamp(200px, 32vh, 42vh);
+    background: var(--slider-bg-color);
+  }
+  .hb-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hb-swiper .swiper-slide img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .hb-caption {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    padding: 0.375rem 0.625rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--slider-nav-color);
+  }
+  .swiper-pagination-bullet {
+    background: var(--slider-nav-color);
+    opacity: 0.6;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
   }
 </style>
 
-<div class="all-in-one-swiper-container">
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="/media/slider/image1.jpg" alt="이미지 1" style="width:100%;"></div>
-      <div class="swiper-slide"><img src="/media/slider/image2.jpg" alt="이미지 2" style="width:100%;"></div>
-      <div class="swiper-slide"><img src="/media/slider/image3.jpg" alt="이미지 3" style="width:100%;"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
-
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>
-  // 이 슬라이더를 바로 실행시킵니다.
-  new Swiper('.swiper', {
-    loop: true,
-    autoplay: {
-      delay: 2500, // 2.5초마다 자동으로 넘어감
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  document.addEventListener('DOMContentLoaded', () => {
+    const slidesData = [
+      { img: '/media/image1.jpeg', alt: '학습', caption: '학습' },
+      { img: '/media/image2.jpeg', alt: '경력', caption: '경력' },
+      { img: '/media/image3.jpeg', alt: '프로젝트', caption: '프로젝트' }
+    ];
+
+    const swiperWrapper = document.querySelector('.hb-swiper .swiper-wrapper');
+    
+    slidesData.forEach(slide => {
+      swiperWrapper.innerHTML += `
+        <div class="swiper-slide">
+          <img src="${slide.img}" alt="${slide.alt}">
+          <div class="hb-caption">${slide.caption}</div>
+        </div>
+      `;
+    });
+    
+    new Swiper('.hb-swiper', {
+      loop: true,
+      speed: 600,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2800,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   });
 </script>
