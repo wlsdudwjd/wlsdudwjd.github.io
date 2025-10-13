@@ -60,4 +60,6 @@ features:
   privacy_pack:
     enable: false
   search:
-    provider: wowchemy
+    provider: google
+    google:
+      search_engine_id: '91bf113e2505840a0'
