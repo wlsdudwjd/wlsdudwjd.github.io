@@ -12,6 +12,16 @@ body {
 
 /* 3. 마우스 호버(Hover) 기능 추가 예시 */
 
+.navbar-nav .nav-link {
+  border-radius: 8px; /* 모서리를 둥글게 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* 색상 전환을 부드럽게 */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #FFD700;
+  color: #333;
+}
+
 /* 예시 A: 모든 링크에 마우스를 올리면 색상 변경 및 밑줄 표시 */
 a:hover {
   color: #0056b3; /* 원하는 호버 색상으로 변경 */
