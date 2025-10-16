@@ -5,9 +5,8 @@
 
 # Appearance
 appearance:
-  theme: ocean
   mode: system
-  color: zinc
+  color: rose
 
 # SEO
 marketing:
