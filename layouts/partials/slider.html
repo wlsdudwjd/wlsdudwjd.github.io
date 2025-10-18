@@ -29,9 +29,6 @@
 
   .hb-swiper .swiper-slide {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,9 +44,22 @@
     background: var(--overlay-color);
   }
 
+  .slide-full-link-wrapper,
+  .slide-content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-decoration: none;
+  }
+
   .hb-overlay-text {
-    position: relative;
-    z-index: 1;
     color: #fff;
     font-size: 2.5rem;
     font-weight: bold;
@@ -59,6 +69,23 @@
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   }
   
+  .hb-slider-button {
+    margin-top: 24px;
+    padding: 12px 28px;
+    background-color: var(--slider-nav-color, #e5e7eb);
+    color: #111;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .hb-slider-button:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+  }
+
   .hb-caption {
     display: none;
   }
@@ -66,6 +93,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     color: var(--slider-nav-color);
+    z-index: 3;
   }
   .swiper-pagination-bullet {
     background: var(--slider-nav-color);
@@ -76,28 +104,61 @@
   }
 
   @media (max-width: 768px){
-    .hb-overlay-text { font-size: 1.2rem; }
+    .hb-overlay-text { font-size: 1.5rem; }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const slidesData = [
-      { img: '/media/image1.jpg', alt: '학습', overlayText: '성장하는 개발자<br>정진영입니다' },
-      { img: '/media/image2.jpg', alt: '경력', overlayText: '저의 포트폴리오 사이트에<br>오신 것을 환영합니다' },
-      { img: '/media/image3.jpg', alt: '프로젝트', overlayText: '저의 성장 여정을 살펴보세요' }
+      { 
+        img: '/media/image1.jpg', 
+        alt: '학습', 
+        overlayText: '성장하는 개발자<br>정진영입니다',
+        link: '/ko/',
+        isButtonSlide: false 
+      },
+      { 
+        img: '/media/image2.jpg', 
+        alt: '경력', 
+        overlayText: '저의 포트폴리오 사이트에<br>오신 것을 환영합니다',
+        link: '/ko/experience/',
+        isButtonSlide: false
+      },
+      { 
+        img: '/media/image3.jpg', 
+        alt: '프로젝트', 
+        overlayText: '저의 성장 여정을 살펴보세요',
+        link: 'introduction/', // 버튼이 클릭될 링크
+        buttonText: '시작하기',
+        isButtonSlide: true
+      }
     ];
 
     const swiperWrapper = document.querySelector('.hb-swiper .swiper-wrapper');
     
+    // [수정] 슬라이드 생성 로직 변경
     slidesData.forEach(slide => {
       const slideElement = document.createElement('div');
       slideElement.className = 'swiper-slide';
       slideElement.style.backgroundImage = `url(${slide.img})`;
 
-      slideElement.innerHTML = `
-        <div class="hb-overlay-text">${slide.overlayText}</div>
-      `;
+      if (slide.isButtonSlide) {
+        // 버튼이 있는 슬라이드 (마지막 슬라이드)
+        slideElement.innerHTML = `
+          <div class="slide-content-wrapper">
+            <div class="hb-overlay-text">${slide.overlayText}</div>
+            <a href="${slide.link}" class="hb-slider-button">${slide.buttonText}</a>
+          </div>
+        `;
+      } else {
+        // 버튼이 없는 일반 슬라이드 (전체 링크)
+        slideElement.innerHTML = `
+          <a href="${slide.link}" class="slide-full-link-wrapper">
+            <div class="hb-overlay-text">${slide.overlayText}</div>
+          </a>
+        `;
+      }
       
       swiperWrapper.appendChild(slideElement);
     });
