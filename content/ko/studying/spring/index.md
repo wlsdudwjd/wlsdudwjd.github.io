@@ -22,6 +22,8 @@ featured: true
 
 share: false
 
+reading_time: false
+
 ---
 
 ## 서블릿에서 스프링 MVC까지: Java 웹 개발의 흐름을 배우다
