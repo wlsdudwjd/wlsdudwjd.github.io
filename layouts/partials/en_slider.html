@@ -1,0 +1,184 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+<script defer src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+
+<section class="hb-slider-wrap">
+  <div class="swiper hb-swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --slider-nav-color: #e5e7eb;
+    --slider-bg-color: #000;
+    --overlay-color: rgba(0, 0, 0, 0);
+  }
+  .hb-slider-wrap {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background: var(--slider-bg-color);
+  }
+  .hb-swiper {
+    width: 100%;
+    height: 100vh;
+    background: var(--slider-bg-color);
+  }
+
+  .hb-swiper .swiper-slide {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .hb-swiper .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+  }
+
+  .slide-full-link-wrapper,
+  .slide-content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-decoration: none;
+  }
+
+  .hb-overlay-text {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.3;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  }
+  
+  .hb-slider-button {
+    margin-top: 24px;
+    padding: 12px 28px;
+    background-color: var(--slider-nav-color, #e5e7eb);
+    color: #111;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .hb-slider-button:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+  }
+
+  .hb-caption {
+    display: none;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--slider-nav-color);
+    z-index: 3;
+  }
+  .swiper-pagination-bullet {
+    background: var(--slider-nav-color);
+    opacity: 0.6;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px){
+    .hb-overlay-text { font-size: 1.5rem; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slidesData = [
+      { 
+        img: '/media/image1.jpg', 
+        alt: '학습', 
+        overlayText: 'I\'m Jinyoung Jung,<br>a growing developer',
+        link: '/ko/',
+        isButtonSlide: false 
+      },
+      { 
+        img: '/media/image2.jpg', 
+        alt: '경력', 
+        overlayText: 'Welcome to my portfolio site',
+        link: '/ko/experience/',
+        isButtonSlide: false
+      },
+      { 
+        img: '/media/image3.jpg', 
+        alt: '프로젝트', 
+        overlayText: 'Explore my journey of growth',
+        link: 'introduction/', // 버튼이 클릭될 링크
+        buttonText: 'Get Started',
+        isButtonSlide: true
+      }
+    ];
+
+    const swiperWrapper = document.querySelector('.hb-swiper .swiper-wrapper');
+    
+    // [수정] 슬라이드 생성 로직 변경
+    slidesData.forEach(slide => {
+      const slideElement = document.createElement('div');
+      slideElement.className = 'swiper-slide';
+      slideElement.style.backgroundImage = `url(${slide.img})`;
+
+      if (slide.isButtonSlide) {
+        // 버튼이 있는 슬라이드 (마지막 슬라이드)
+        slideElement.innerHTML = `
+          <div class="slide-content-wrapper">
+            <div class="hb-overlay-text">${slide.overlayText}</div>
+            <a href="${slide.link}" class="hb-slider-button">${slide.buttonText}</a>
+          </div>
+        `;
+      } else {
+        // 버튼이 없는 일반 슬라이드 (전체 링크)
+        slideElement.innerHTML = `
+          <a href="${slide.link}" class="slide-full-link-wrapper">
+            <div class="hb-overlay-text">${slide.overlayText}</div>
+          </a>
+        `;
+      }
+      
+      swiperWrapper.appendChild(slideElement);
+    });
+    
+    new Swiper('.hb-swiper', {
+      loop: true,
+      speed: 600,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2800,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
