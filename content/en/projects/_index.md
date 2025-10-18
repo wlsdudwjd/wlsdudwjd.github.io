@@ -11,8 +11,8 @@ design:
 sections:
   - block: collection
     content:
-      title: 프로젝트 및 과제
-      text: 진행중이거나 지금까지 했던 프로젝트 및 과제를 소개합니다.
+      title: Projects and HW
+      text: Introducing projects and assignments that are in progress or have been done so far.
       filters:
         folders:
           - projects
