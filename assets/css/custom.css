@@ -49,8 +49,8 @@
   color: var(--color-text-default);
 }
 
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus {
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
   color: var(--color-primary-main);
   background-color: var(--color-primary-bg);
   padding-left: 1rem;
@@ -71,8 +71,8 @@
   color: var(--color-text-dark-default);
 }
 
-.dark .dropdown-menu .dropdown-item:hover,
-.dark .dropdown-menu .dropdown-item:focus {
+.dark .navbar .dropdown-menu .dropdown-item:hover,
+.dark .navbar .dropdown-menu .dropdown-item:focus {
   color: var(--color-primary-light);
   background-color: var(--color-primary-bg-dark);
 }
