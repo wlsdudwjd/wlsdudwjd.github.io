@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 정진영
+title: Jinyoung Jung
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -23,11 +23,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: 학부생
+role: undergraduate student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: 전북대학교 컴퓨터인공지능학부
+  - name: Department of Computer Science & Artificial Intelligence, JBNU
     url: https://csai.jbnu.ac.kr/csai/index.do
 
 # Social network links
