@@ -1,5 +1,5 @@
 ---
-title: 전화번호부 애플리케이션
+title: Phone Book Application
 date: 2024-12-20
 links:
   - type: site
