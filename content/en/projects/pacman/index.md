@@ -29,7 +29,7 @@ First, I implemented four fundamental search algorithms that can be applied to a
 - DFS (Depth-First Search): Using a **Stack**, this algorithm explores nodes as deeply as possible first. It was implemented as a graph search, using an **explored** list to prevent cycles.
 - BFS (Breadth-First Search): Using a **Queue**, this algorithm explores the shallowest (closest) nodes first. It guarantees the shortest path when all edge costs are uniform.
 - UCS (Uniform Cost Search): Using a **PriorityQueue**, this algorithm prioritizes nodes by their total cumulative 'cost'. It always explores the path with the lowest cost first, guaranteeing the shortest cost path.
-- A* (A-Star) Search: Also uses a **PriorityQueue**, but its priority is the sum of the 'cumulative cost to date' ($$g(n)$$) and an 'estimated cost to the goal' (heuristic, $$h(n)$$). This function is $$f(n) = g(n) + h(n)$$. As an informed search, it finds the optimal solution far more efficiently than UCS.
+- A* (A-Star) Search: Also uses a **PriorityQueue**, but its priority is the sum of the 'cumulative cost to date' ($g(n)$) and an 'estimated cost to the goal' (heuristic, $h(n)$). This function is $f(n) = g(n) + h(n)$. As an informed search, it finds the optimal solution far more efficiently than UCS.
 
 ## 2. Defining and Solving Pacman Problems (searchAgents.py)
 
