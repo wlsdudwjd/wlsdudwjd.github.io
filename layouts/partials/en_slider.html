@@ -152,9 +152,9 @@
       } else {
         // 버튼이 없는 일반 슬라이드 (전체 링크)
         slideElement.innerHTML = `
-          <a href="${slide.link}" class="slide-full-link-wrapper">
+          <div class="slide-content-wrapper">
             <div class="hb-overlay-text">${slide.overlayText}</div>
-          </a>
+          </div>
         `;
       }
       

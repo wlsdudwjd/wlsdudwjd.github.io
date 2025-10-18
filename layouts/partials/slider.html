@@ -135,14 +135,12 @@
 
     const swiperWrapper = document.querySelector('.hb-swiper .swiper-wrapper');
     
-    // [수정] 슬라이드 생성 로직 변경
     slidesData.forEach(slide => {
       const slideElement = document.createElement('div');
       slideElement.className = 'swiper-slide';
       slideElement.style.backgroundImage = `url(${slide.img})`;
 
       if (slide.isButtonSlide) {
-        // 버튼이 있는 슬라이드 (마지막 슬라이드)
         slideElement.innerHTML = `
           <div class="slide-content-wrapper">
             <div class="hb-overlay-text">${slide.overlayText}</div>
@@ -150,11 +148,10 @@
           </div>
         `;
       } else {
-        // 버튼이 없는 일반 슬라이드 (전체 링크)
         slideElement.innerHTML = `
-          <a href="${slide.link}" class="slide-full-link-wrapper">
+          <div class="slide-content-wrapper">
             <div class="hb-overlay-text">${slide.overlayText}</div>
-          </a>
+          </div>
         `;
       }
       
