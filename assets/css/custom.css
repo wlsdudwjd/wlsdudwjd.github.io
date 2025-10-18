@@ -92,3 +92,19 @@ article p {
   */
   word-break: keep-all; 
 }
+
+body {
+  /* 라이트 모드 (기본) 배경 및 글자색 */
+  background-color: #fafafa; /* 매우 밝은 회색 (흰색은 #ffffff) */
+  color: #2b2b2b;           /* 기본 글자색 (기존 코드와 통일) */
+  
+  /* 다크 모드 전환 시 부드러운 효과 */
+  transition: background-color 0.15s ease-in-out, 
+              color 0.15s ease-in-out;
+}
+
+body.dark {
+  /* 다크 모드 배경 및 글자색 */
+  background-color: #1e1e1e; /* 매우 어두운 회색 (차콜) */
+  color: #e2e8f0;           /* 기본 글자색 (기존 코드와 통일) */
+}
