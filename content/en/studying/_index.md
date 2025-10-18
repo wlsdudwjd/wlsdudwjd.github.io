@@ -1,5 +1,5 @@
 ---
-title: 저는 지금 이것을 공부 하고 있어요!
+title: I'm studying these now!
 cms_exclude: true
 
 # View.
