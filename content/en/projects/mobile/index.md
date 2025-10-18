@@ -16,24 +16,21 @@ share: false
 reading_time: false
 ---
 
-2024년 2학기 모바일프로그래밍 수업에서 만든 간단한 모바일 앱입니다.
+This is a simple mobile app I created for my "Mobile Programming" course in the 2024 fall semester. This project is a phonebook management app that utilizes fundamental Android features and a database.
 
-이 프로젝트는 안드로이드의 기본 기능과 데이터베이스를 활용한 전화번호부 관리 앱입니다.
+First, I designed a database named phoneDB and a table named phoneTBL. This table stores a name (VARCHAR(20)) and a phone number (VARCHAR(20)). I set a UNIQUE constraint on the name column to prevent duplicates. I included two initial data entries: "Hong Gil-dong" and my own contact information.
 
+The main features I implemented are as follows:
 
-먼저, phoneDB라는 이름의 데이터베이스와 phoneTBL 테이블을 설계했습니다. 이 테이블은 **이름(문자형 20)**과 **전화번호(문자형 20)**를 저장하며, 이름은 중복될 수 없도록 UNIQUE 제약 조건을 설정했습니다. '홍길동'과 제 연락처를 초기 데이터 2개로 포함시켰습니다.
+Main Screen (Read Data): On app launch, the app queries the database and displays all saved user names in a ListView. An "Add" button and an options menu are placed at the bottom.
 
-제가 구현한 주요 기능은 다음과 같습니다.
+Add Contact (Create): Tapping the "Add" button opens a separate Activity to receive name and phone number input. Upon completion, this information is passed back to the main Activity, saved to the database, and the ListView is immediately refreshed.
 
-메인 화면 (데이터 조회): 앱 실행 시, 데이터베이스에 저장된 모든 사용자의 이름을 리스트(ListView)로 불러와 보여줍니다. 하단에는 '추가' 버튼과 옵션 메뉴를 배치했습니다.
+Database Initialization (Delete All): Selecting "Initialize" from the options menu displays a confirmation dialog. If the user confirms, all content in the database is deleted, and the list is refreshed.
 
-연락처 추가 (Create): '추가' 버튼을 누르면, 별도의 Activity가 열려 이름과 전화번호를 입력받습니다. 입력 완료 후, 이 정보를 메인 Activity로 전달하여 데이터베이스에 저장하고 리스트를 즉시 갱신하도록 구현했습니다.
+Data Backup (Export): Through the "Backup" feature in the options menu, I implemented a function to save all names and phone numbers from the database as a .txt file (named after my student ID) to the /sdcard path.
 
-데이터베이스 초기화 (Delete All): 옵션 메뉴에서 '초기화'를 선택하면, 대화상자를 띄워 사용자에게 정말 초기화할 것인지 확인을 받습니다. '확인'을 누르면 데이터베이스의 모든 내용을 삭제하고 리스트도 새로고침합니다.
+Phone App Integration (Intent): When a specific item in the list is clicked, the app retrieves that item's phone number and uses an Intent to immediately launch the default Android phone app with the number pre-filled.
 
-데이터 백업 (Export): 옵션 메뉴의 '백업' 기능을 통해, 데이터베이스에 저장된 모든 이름과 전화번호를 SD카드(_sdcard) 경로에 제학번.txt 파일로 저장하는 기능을 구현했습니다.
-
-전화 앱 연동 (Intent): 리스트의 특정 항목을 클릭하면, 해당 항목의 전화번호를 가져와 안드로이드의 기본 전화 앱으로 즉시 연결(Intent)되도록 했습니다.
-
-수정 및 삭제 (Update/Delete): 리스트 항목을 길게 누르면(Long Click), 선택한 항목을 수정하거나 삭제할 수 있는 별도의 Activity로 이동합니다. 각 작업 시 대화상자를 통해 사용자 확인을 받도록 했으며, 완료 시 메인 Activity의 데이터베이스와 리스트에 변경 사항이 실시간으로 반영되도록 구현했습니다.
+Update & Delete: A long click on a list item navigates to a separate Activity where the selected item can be modified or deleted. I implemented confirmation dialogs for each action. Upon completion, the changes are reflected in the main Activity's database and ListView in real-time.
 <!--more-->

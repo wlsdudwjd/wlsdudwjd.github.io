@@ -1,13 +1,15 @@
 ---
-title: 리눅스 TCP 채팅 프로그램
-date: 2023-10-26
+title: Linux TCP chat program
+date: 2024-06-26
 links:
   - type: site
     url: https://github.com/wlsdudwjd/LinuxProject
 tags:
-  - Hugo
-  - HugoBlox
-  - Markdown
+  - Linux
+  - Cpp
+  - C
+  - TCP
+  - Chat
 
 featured: true
 
@@ -16,53 +18,56 @@ share: false
 reading_time: false
 ---
 
-리눅스 시스템 프로그래밍 수업에서 배운 내용을 바탕으로 간단한 멀티-클라이언트 TCP 채팅 프로그램을 프로젝트로 구현해 보았습니다.
+Based on what I learned in my Linux System Programming class, I implemented a simple multi-client TCP chat program as a project.
 
-C언어의 소켓(Socket) 통신과 멀티스레드(pthread) 개념을 직접 적용해 볼 수 있었던 의미 있는 경험이라, 프로젝트의 구조와 핵심 동작 원리, 그리고 배운 점들을 정리해 보려고 합니다.
+It was a meaningful experience to directly apply the concepts of C socket communication and multithreading (pthreads). I'd like to summarize the project's structure, core operating principles, and the key takeaways.
 
-## 1. 프로젝트 개요
-이 프로그램은 1개의 서버와 다수의 클라이언트가 TCP/IP 프로토콜을 기반으로 실시간 채팅을 주고받을 수 있는 간단한 콘솔(터미널) 기반 채팅방입니다.
+## 1. Project Overview
+This program is a simple console-based (terminal) chatroom that allows a single server and multiple clients to chat in real-time over the TCP/IP protocol.
 
-**주요 기술**: C언어, TCP/IP 소켓 프로그래밍, pthread (멀티스레딩)
+**Key Technologies**: C Language, TCP/IP Socket Programming, pthread (Multithreading)
 
-**핵심 기능**:
+**Core Features**:
 
-- 서버: 다수의 클라이언트 접속을 동시에 관리합니다.
-- 브로드캐스팅: 한 클라이언트가 보낸 메시지를, 보낸 사람을 제외한 모든 접속자에게 전송합니다.
-- 멀티 채팅: 여러 사용자가 동시에 메시지를 보내고 받을 수 있습니다.
+- Server: Manages multiple client connections simultaneously.
 
-## 2. 핵심 아키텍처: 어떻게 동시에?
-채팅 프로그램의 핵심은 '어떻게 여러 명의 요청을 동시에 처리하는가'입니다. accept(), recv(), fgets() 같은 함수들은 기본적으로 '블로킹(Blocking)' 방식으로 동작합니다. 즉, 자기 차례가 올 때까지 프로그램 전체를 멈추고 기다립니다.
+- Broadcasting: Transmits a message from one client to all other connected clients (except the sender).
 
-이 문제를 해결하기 위해 멀티스레딩을 사용했습니다.
+- Multi-Chat: Allows multiple users to send and receive messages at the same time.
 
-⚙️ **서버: 클라이언트마다 전담 스레드 (Thread-per-Client)**
-서버는 동시에 여러 클라이언트의 접속 요청과 메시지 수신을 처리해야 합니다.
+## 2. Core Architecture: How Concurrency is Achieved
+The core challenge of a chat program is handling multiple requests simultaneously. Functions like accept(), recv(), and fgets() are blocking by default. This means the entire program pauses and waits for an operation to complete before moving on.
 
-1. 메인 스레드는 accept() 함수로 클라이언트의 새로운 접속을 기다립니다.
+I used multithreading to solve this problem.
 
-2. 새로운 클라이언트가 접속하면, pthread_create()를 호출해 그 클라이언트만을 전담하는 스레드(client_chat)를 하나 생성합니다.
+⚙️ **Server: Thread-per-Client Model**
+The server needs to handle connection requests and receive messages from multiple clients at the same time.
 
-3. 이 전담 스레드는 recv() 함수를 통해 해당 클라이언트로부터 메시지가 올 때까지 대기합니다.
 
-4. 메인 스레드는 다시 accept()로 돌아가 다음 접속자를 기다립니다.
+1. The main thread waits for new client connections using the accept() function.
 
-즉, '접속 처리' 스레드와 '클라이언트별 메시지 수신' 스레드들이 각자 독립적으로 동시에 실행됩니다.
+2. When a new client connects, it calls pthread_create() to create a new, dedicated thread (client_chat) just for that client.
 
-메시지를 받으면 send_msg 함수가 모든 클라이언트 리스트(clientList)를 순회하며 메시지를 전파(브로드캐스팅)합니다.
+3. This dedicated thread waits for messages from its client using the recv() function.
 
-💻 **클라이언트: '보내는 스레드'와 '받는 스레드'의 분리**
-클라이언트 역시 큰 숙제가 있습니다. 바로 내가 메시지를 입력하는 중에도 다른 사람의 메시지를 실시간으로 받아야 한다는 것입니다.
+4. The main thread immediately loops back to accept() to wait for the next client.
 
-만약 스레드가 하나라면, fgets()로 내 입력을 기다리는 동안 recv()가 실행될 수 없어 다른 사람의 메시지를 받지 못합니다.
+In effect, the "connection handling" thread (main) and the "per-client message receiving" threads all run independently and concurrently.
 
-이 문제를 해결하기 위해 클라이언트 프로그램을 2개의 스레드로 분리했습니다.
+When a thread receives a message, it calls the send_msg function, which iterates through the clientList to broadcast the message to all other clients.
 
-1. 메인 스레드 (main 함수): 사용자의 키보드 입력(fgets)을 받아 서버로 전송(send)하는 '보내는' 역할만 전담합니다.
+💻 **Client: Separation of Sending and Receiving Threads The client has its own major**
+challenge: it must be able to receive messages from others in real-time, even while the user is typing their own message.
 
-2. 수신 스레드 (receive 함수): pthread_create()로 생성되며, 오직 서버로부터 메시지를 받는(recv) '받는' 역할만 전담합니다.
+If it were single-threaded, the program would block on fgets() (waiting for user input), making it impossible to call recv() and receive incoming messages.
 
-이렇게 두 스레드가 각자의 역할을 나눠 갖기 때문에, 내가 메시지를 한창 입력하고 있는 중에도 receive 스레드는 서버가 보낸 다른 사람의 메시지를 화면에 실시간으로 출력해줄 수 있습니다.
+To solve this problem, the client program is also split into two threads:
 
-위에 첨부된 링크로 코드를 확인하실 수 있습니다!
+1. Main Thread (main function): This thread is dedicated only to the "sending" role. It waits for the user's keyboard input (fgets) and sends (send) the message to the server.
+
+2. Receiving Thread (receive function): Created with pthread_create(), this thread is dedicated only to the "receiving" role. It blocks on recv(), waiting for messages to arrive from the server.
+
+By splitting the roles this way, the receive thread can display incoming messages from the server in real-time, even while the user is busy typing a new message in the main thread.
+
+You can check out the code via the link(s) attached above!
 <!--more-->

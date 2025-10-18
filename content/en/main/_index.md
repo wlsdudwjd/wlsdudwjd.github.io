@@ -11,16 +11,15 @@ design:
 sections:
   - block: resume-biography-3
     content:
-      title: 소개
+      title: Introduction
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: 이력서 보기
+        text: View resume
         url: uploads/resume.pdf
       headings:
-        about: '소개'
         education: ''
         interests: ''
         experience: '경력'
@@ -36,36 +35,11 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: square # Options: circle (default), square, roundedx
-    
-  # - block: markdown
-  #   content:
-  #     title: '📚 현재 공부중'
-  #     subtitle: ''
-  #     text: |-
-  #       현재 Backend 개발을 위해 Spring-boot를 공부하고 있습니다!
-  #       자바도~~~~ 😃
-  #   design:
-  #     columns: '1'
-  # - block: features
-  #   content:
-  #     title: 앞으로 공부 할 것
-  #     items:
-  #       - name: 인공지능(AI)
-  #         icon: hero/code-bracket
-  #         description: <span style="font-size:90%">인공지능 공부<span><br><br>
-  #       - name: 백엔드
-  #         icon: hero/server-stack
-  #         description: <span style="font-size:90%">백엔드 공부</span><br><br>
-  #       - name: 프론트엔드
-  #         icon: hero/computer-desktop
-  #         description: <span style="font-size:90%">프론트엔드 공부<span><br><br>
-  #   design:
-  #     columns: 3
 
   - block: collection
-    id: papers
+    id: studying
     content:
-      title: 📚저는 지금 이것을 공부 하고 있어요!!
+      title: 📚I'm studying these now!!!
       filters:
         folders:
           - studying
@@ -77,7 +51,7 @@ sections:
   - block: collection
     id: projects
     content:
-      title: 프로젝트 바로가기
+      title: View projects
       filters:
         folders:
           - projects
@@ -85,7 +59,7 @@ sections:
     design:
       view: card
       columns: 3
-      
+
   # - block: collection
   #   content:
   #     title: Recent Publications
@@ -99,7 +73,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: 뭐하지
+      title: hmm
       filters:
         folders:
           - events
