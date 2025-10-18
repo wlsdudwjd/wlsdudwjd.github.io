@@ -36,7 +36,7 @@ header:
     show_theme_chooser: true
     logo:
       #text: '정진영의 포트폴리오'
-      filename: 'jung.png'
+      filename: 'icon.png'
 
 # Site footer
 footer:
@@ -59,7 +59,3 @@ features:
     enable: false
   privacy_pack:
     enable: false
-  search:
-    provider: google
-    google:
-      search_engine_id: '91bf113e2505840a0'
