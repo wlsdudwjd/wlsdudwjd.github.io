@@ -149,7 +149,7 @@ awards:
       Full scholarship for the top student (1st place) in the first semester of 2025
 ---
 
-Hello, my name is Jinyoung Jung, a third-year student in the Department of Computer and Artificial Intelligence at JBNU.
+Hello, my name is Jinyoung Jung, a third-year student in the Department of Computer Science and Artificial Intelligence at JBNU.
 
 I'm deeply fascinated by web development, which transforms ideas into tangible results. To further understand this process, I'm currently focusing on building backend servers based on Java and Spring Boot, building robust server technologies. My long-term goal is to become a reliable full-stack developer, building front-end capabilities that are responsible for the user experience.
 
