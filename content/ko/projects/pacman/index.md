@@ -14,6 +14,8 @@ featured: true
 share: false
 
 reading_time: false
+
+math: true
 ---
 
 이 프로젝트는 인공지능 수업의 일환으로 진행한 UC Berkeley Pacman AI 프로젝트입니다. 이 과제의 핵심 목표는 **그래프 탐색(Graph Search)**의 기본이 되는 여러 알고리즘을 직접 구현하고, 이를 팩맨 게임 환경에 적용하여 실제 문제를 해결하는 것이었습니다.

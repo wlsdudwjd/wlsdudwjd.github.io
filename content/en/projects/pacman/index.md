@@ -14,6 +14,8 @@ featured: true
 share: false
 
 reading_time: false
+
+math: true
 ---
 
 This is the UC Berkeley Pacman AI project I completed as part of my Artificial Intelligence and Data Structures coursework. The core objective of this assignment was to implement fundamental Graph Search algorithms from scratch and apply them to solve tangible problems within the Pacman game environment.
