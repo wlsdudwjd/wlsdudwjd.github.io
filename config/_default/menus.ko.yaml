@@ -5,7 +5,7 @@
 
 main:
   - name: 소개
-    url: introduction/
+    url: main/
     weight: 10
 
   - name: 학습
