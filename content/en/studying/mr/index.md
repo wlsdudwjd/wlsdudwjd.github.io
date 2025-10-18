@@ -29,33 +29,28 @@ reading_time: false
 
 ---
 
-## 머신러닝 학습 일지: 데이터로 컴퓨터를 가르치다
+## Machine Learning Study Log: Teaching a Computer with Data
 
-3학년 2학기가 되면서 **기계학습**이라는 교과목을 접하게 되었습니다. 매주 월, 수 16시에 공과대학 7호관 523호실에서 송현제 교수님의 수업을 듣고 있습니다. 위의 첨부되어 있는 링크에서 송현제 교수님 사이트에서 정보를 확인 하실 수 있습니다!
+As I entered the fall semester of my junior year, I began taking a course called "Machine Learning". I'm attending Professor Song Hyun-je's lectures every Monday and Wednesday at 4:00 PM in Room 523 of Engineering Building 7. You can find more information on Professor Song Hyun-je's site via the link attached above!
 
-'머신러닝'이라는 단어, 처음에는 왠지 어렵고 복잡하게만 느껴졌습니다. 하지만 막상 배워보니, 생각보다 우리 삶과 가까운, 흥미로운 기술이라는 것을 알게 되었습니다. 제가 배운 머신러닝의 기초적인 개념들을 쉬운 말로 한번 정리해 보았습니다.
+At first, the term "Machine Learning" felt very difficult and complex. However, now that I've started learning it, I've realized it's a fascinating technology that is much closer to our daily lives than I expected. I've decided to summarize the basic ML concepts I've learned in my own simple words.
 
-🧐 **머신러닝, 그게 뭔데?**
-제가 이해한 머신러닝은 아주 간단한 아이디어에서 시작합니다. 컴퓨터에게 '이건 사과야', '이건 오렌지야'라고 하나하나 모든 규칙을 알려주는 대신, 수많은 데이터를 보여주고 컴퓨터가 스스로 패턴이나 규칙을 배우게 하는 기술입니다.
+🧐 So, what is Machine Learning? My understanding is that machine learning starts with a very simple idea. Instead of explicitly telling a computer every single rule (e.g., "this is an apple," "this is an orange"), it is a technology that lets the computer learn patterns and rules on its own by showing it vast amounts of data.
 
-마치 어린아이가 강아지 사진 수백 장을 보고 '아, 귀가 쫑긋하고 털이 북슬한 동물이 강아지구나!' 하고 스스로 깨닫는 것과 비슷하죠.
+It's similar to how a young child might look at hundreds of pictures of dogs and come to realize on their own, "Ah, an animal with perky ears and fluffy fur is a dog!"
 
-📚 내가 배운 학습 방법 두 가지
-머신러닝에는 여러 종류가 있지만, 저는 가장 대표적인 두 가지 방법에 대해 배웠습니다.
+📚 Two Learning Methods I've Learned There are many types of machine learning, but I have learned about the two most representative methods.
 
-1. 정답을 알려주며 가르치기: 지도 학습 (Supervised Learning)
-지도 학습은 말 그대로 '정답(Label)'이 있는 데이터로 컴퓨터를 학습시키는 방법입니다. '문제'와 '정답'을 한 세트로 묶어서 계속 보여주는 거죠.
+1. Teaching with the "Answer Key": Supervised Learning Supervised learning is, as the name suggests, a method of training a computer using data that already has the "answer" (known as a Label). It works by repeatedly showing the computer sets of "problems" and "answers" together.
 
-스팸 메일 필터가 대표적인 예입니다. '이건 스팸 메일이야(정답)', '이건 중요한 메일이야(정답)'라고 표시된 수많은 이메일(문제)을 학습시키면, 나중에는 새로운 메일이 왔을 때 스스로 스팸인지 아닌지 구분하게 됩니다.
+A spam filter is a classic example. By training the model on countless emails (problems) labeled as "this is spam" (answer) or "this is important" (answer), it eventually learns to classify new, unseen emails on its own.
 
-주택 가격 예측도 마찬가지입니다. 'A 지역의 30평 아파트는 5억이야(정답)' 같은 수많은 집값 데이터(문제)를 학습하면, 새로운 아파트 정보를 주었을 때 가격을 예측할 수 있게 됩니다.
+Housing price prediction is another example. If it learns from vast amounts of housing data (problems) like, "A 3-bedroom house in Area A costs $500,000" (answer), it will be able to predict the price when given information about a new house.
 
-2. 정답 없이 스스로 배우게 하기: 비지도 학습 (Unsupervised Learning)
-비지도 학습은 정답이 없는, 날것의 데이터를 던져주고 "이 안에서 뭔가 의미 있는 그룹이나 구조를 찾아봐!" 하고 시키는 것과 같습니다. 컴퓨터는 데이터의 특징을 분석해서 비슷한 것들끼리 스스로 묶어줍니다.
+2. Letting it Learn on its Own: Unsupervised Learning Unsupervised learning is like giving the computer raw data without any answers and telling it, "Find some meaningful groups or structures within this!" The computer analyzes the features of the data and groups similar items together by itself.
 
-고객 관리에 유용하게 쓰일 수 있습니다. 고객들의 구매 패턴 데이터를 주고 그룹으로 묶어보게 하면, '알뜰 구매 그룹', '신제품 선호 그룹'처럼 숨겨진 고객 그룹을 찾아낼 수 있습니다.
+This is very useful for customer management. By feeding it customer purchase pattern data, the model can discover hidden customer segments, such as a "budget shopper group" or a "new product enthusiast group."
 
-뉴스 기사 클러스터링도 좋은 예입니다. 수많은 뉴스 기사를 던져주면, 인공지능이 스스로 '정치', '경제', '스포츠' 등 비슷한 주제의 기사들끼리 묶어줍니다.
+News article clustering is another great example. When given thousands of news articles, the AI can automatically bundle them into similar topics like "Politics," "Economy," or "Sports."
 
-✨ 마치며
-직접 개념을 배우고 나니, 머신러닝이 막연한 기술이 아니라 문제를 해결하기 위한 아주 논리적인 도구라는 생각이 들었습니다. 물론 아직은 정말 기초적인 부분만 알고 있지만, 데이터 속에서 의미를 찾아내는 과정이 정말 매력적이라고 느꼈습니다. 앞으로 더 깊이 공부해 보고, 간단한 프로젝트도 직접 해보고 싶다는 목표가 생겼습니다.
+✨ Closing Thoughts Now that I've learned the concepts firsthand, I feel that machine learning isn't some vague, abstract technology, but rather a very logical tool for solving problems. Of course, I still only know the absolute basics, but I find the process of discovering meaning within data to be truly fascinating. I've now set a goal for myself to study this more deeply and to try and build a simple project of my own.

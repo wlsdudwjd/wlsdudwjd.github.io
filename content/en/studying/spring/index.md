@@ -24,39 +24,37 @@ share: false
 
 ---
 
-## 서블릿에서 스프링 MVC까지: Java 웹 개발의 흐름을 배우다
+##From Servlets to Spring MVC: Learning the Evolution of Java Web Development
+This time, I took the opportunity to trace the evolution of web applications, a technology that can be called the core of Java backend development.
 
-이번에는 Java 백엔드 개발의 핵심 기술이라 할 수 있는 웹 애플리케이션의 발전 과정을 되짚어보는 시간을 가졌습니다.
+Why Web Applications? Most modern applications operate in a web environment. The countless services we use every day are, in fact, web applications. Java backend developers play a critical role in developing the server-side logic for these applications, and the most powerful tool used for this is the Spring Framework—specifically, Spring MVC.
 
-왜 웹 애플리케이션인가?
-현대의 애플리케이션은 대부분 웹 환경에서 동작합니다. 우리가 매일 사용하는 수많은 서비스가 바로 웹 애플리케이션이죠. Java 백엔드 개발자는 이러한 웹 애플리케이션의 서버 측 로직을 개발하는 중요한 역할을 담당하며, 이때 가장 강력한 도구로 사용되는 것이 바로 스프링 프레임워크, 특히 스프링 MVC입니다.
+To gain a deep understanding of Spring MVC, which helps us develop complex web applications quickly and easily, I studied its foundational technologies step-by-step, starting from its very roots.
 
-이번 학습을 통해 복잡한 웹 애플리케이션을 쉽고 빠르게 개발할 수 있도록 도와주는 스프링 MVC를 깊이 이해하기 위해, 그 뿌리가 되는 기술부터 차근차근 공부했습니다.
+1. The Beginning of Java Web Tech: Servlets
+Everything started with Servlets. A Servlet is pure Java code that receives a client's request, processes business logic, and generates a dynamic HTML response. However, this approach had a major drawback: HTML code had to be written directly within the Java code as strings (e.g., out.println("<html>...")). This made modifying the view (the UI) cumbersome and severely harmed readability.
 
-1. Java 웹 기술의 시작, 서블릿(Servlet)
-모든 것은 서블릿에서 시작되었습니다. 서블릿은 클라이언트의 요청을 받고, 비즈니스 로직을 처리한 후, 동적인 HTML 응답을 생성하는 순수 Java 코드입니다. 하지만 서블릿 코드 안에 HTML 코드를 문자열(out.println("<html>...")) 형태로 작성해야 했기 때문에, 화면을 수정하기가 매우 번거롭고 가독성이 떨어지는 단점이 있었습니다.
+2. Separating the View: JSP (JavaServer Pages)
+JSP emerged to compensate for this shortcoming. JSP is a technology that allows embedding Java code within an HTML document, which made collaboration between designers and developers much easier. Thanks to this, the task of presenting the view became much more manageable.
 
-2. 화면을 분리하다, JSP(JavaServer Pages)
-이러한 서블릿의 단점을 보완하기 위해 등장한 것이 JSP입니다. JSP는 HTML 문서 안에 Java 코드를 삽입하는 방식으로, 디자이너와 개발자의 협업을 더 쉽게 만들었습니다. 덕분에 화면(View)을 표현하는 작업이 훨씬 수월해졌습니다.
+But JSP alone was not enough. Business logic and presentation code were still mixed in a single file. As projects grew larger, this led to "spaghetti code," which became increasingly difficult to maintain.
 
-하지만 JSP만으로는 부족했습니다. 비즈니스 로직과 화면을 보여주는 코드가 하나의 파일에 뒤섞여, 프로젝트 규모가 커질수록 유지보수가 어려워지는 '스파게티 코드' 문제가 발생하기 시작했습니다.
+3. The Start of Role Separation: The MVC Pattern
+To solve this problem, a design philosophy called the MVC (Model-View-Controller) pattern emerged.
 
-3. 역할 분담의 시작, MVC 패턴
-이 문제를 해결하기 위해 MVC(Model-View-Controller) 패턴이라는 설계 사상이 등장했습니다.
+Model: Manages the data and business logic.
 
-Model: 데이터와 비즈니스 로직을 담당합니다.
+View: Manages the screen (UI) shown to the user. (JSP)
 
-View: 사용자에게 보여지는 화면(UI)을 담당합니다. (JSP)
+Controller: Acts as the intermediary, receiving the user's request and connecting the Model and View. (Servlet)
 
-Controller: 사용자의 요청을 받아 Model과 View를 연결해주는 중간 다리 역할을 합니다. (Servlet)
+By clearly separating these roles, the code became much more structured and reusable.
 
-이렇게 각자의 역할을 명확히 분리함으로써, 코드는 훨씬 더 체계적이고 재사용하기 쉬워졌습니다.
+4. The Birth of Spring MVC and its Practical Use
+Implementing the MVC pattern manually still involved a lot of repetitive and cumbersome work. Developers began to create MVC frameworks to make using this pattern easier, and the most successful and overwhelmingly popular of these became Spring MVC.
 
-4. 스프링 MVC의 탄생과 실무 활용
-MVC 패턴을 직접 구현하는 것은 여전히 반복적이고 번거로운 작업이 많았습니다. 개발자들은 이러한 MVC 패턴을 더 쉽고 편리하게 사용할 수 있도록 도와주는 MVC 프레임워크를 만들기 시작했고, 그중 가장 성공적이고 압도적인 인기를 얻게 된 것이 바로 스프링 MVC입니다.
+Spring MVC handles the complex processes required for MVC implementation on behalf of the developer, providing an environment where one can focus solely on the business logic. This study covered everything from the origins of Spring MVC to the modern techniques used in the field, allowing me to personally understand why countless companies choose Spring.
 
-스프링 MVC는 MVC 패턴 구현에 필요한 복잡한 처리 과정을 대신해주어, 개발자가 오직 비즈니스 로직에만 집중할 수 있는 환경을 제공합니다. 이번 학습을 통해 스프링 MVC의 탄생 배경부터 실무에서 주로 사용하는 최신 기술까지 익히며, 왜 수많은 기업이 스프링을 선택하는지 몸소 깨달을 수 있었습니다.
+I will continue to share my experiences as I conduct my own projects using these technologies. Thank you!
 
-앞으로 이 기술들을 활용하여 직접 프로젝트를 진행하며 겪는 경험들도 꾸준히 공유해 나가겠습니다. 감사합니다!
-
-위의 첨부된 링크에서 제가 지금까지 공부한 코드들을 확인 해볼 수 있습니다!
+You can check out the code I've studied so far via the link attached above!

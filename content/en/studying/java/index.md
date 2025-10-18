@@ -8,7 +8,7 @@ date: '2025-10-12T00:00:00Z'
 
 links:
   - type: site
-    url: https://github.com/wlsdudwjd
+    url: https://github.com/wlsdudwjd/Java-Study
 
 tags:
   - JAVA
@@ -21,39 +21,35 @@ image:
 featured: true
 ---
 
-자바의 문법과 기능을 단순히 알기만 하는 것이 아니라, 그 기능이 왜 필요하고 어떻게 실무에 적용할 수 있는지에 대해 깊이 있게 탐구하기 위해 공부를 시작하였다.
 
-지금까지 공부한 내용은 다음과 같다.
+I began this study not just to simply understand Java's syntax and features, but to deeply explore why those features are necessary and how they can be applied in practice.
 
-**Object 클래스**
+The topics I have studied so far are as follows.
 
-Object 클래스는 모든 클래스의 최상위 부모이다.
-Object 클래스가 필요한 이유와 Object 클래스가 제공하는 기능과 equals()를 통해 자바의 동일성과 동등성 개념도 함께 공부하였다.
+**Object Class**
 
-**불변 객체**
+The Object class is the top-level parent of all classes. I studied the reasons why the Object class is necessary, the features it provides, and also learned about the concepts of identity vs. equality in Java through the equals() method.
 
-한번 생성하면 그 이후로 변하지 않는 객체를 불변 객체라 합니다.
-String, 래퍼, 날짜와 시간을 포함해서 자바가 제공하는 많은 객체들은 불변 객체로 제공된다. 불변 객체가 왜 필요한지, 그리고 어떻게 불변 객체를 만드는지 공부하였다.
+**Immutable Objects**
 
-**String 클래스**
+An immutable object is an object whose state cannot be changed after it is created. Many objects provided by Java—including String, wrapper classes, and date/time objects—are immutable. I studied why immutable objects are necessary and how to create them.
 
-String 클래스는 자바에서 문자열을 다룰 때 사용되는 클래스이다.
-String 객체의 기본 기능 뿐만 아니라, StringBuilder와 String의 기능과 성능 차이, 또한 자바가 String 클래스를 어떻게 최적화하는지 공부하였다.
+**String Class**
 
-**래퍼, Class 클래스**
+The String class is used for handling character strings in Java. I studied not only the basic features of String objects but also the functional and performance differences between StringBuilder and String, as well as how Java optimizes the String class.
 
-자바 기본형의 한계를 알아보고 그 한계를 극복하기 위한 래퍼 클래스를 공부하였다.
-추가로 클래스의 정보를 나타내는 Class 클래스, 시스템의 정보를 제공하는 System 클래스, 자주 사용하는 Math, Random 같은 클래스도 함께 공부하였다.
+**Wrapper & Class Classes**
 
-**열거형 - ENUM**
+I learned about the limitations of Java's primitive types and studied the wrapper classes designed to overcome them. Additionally, I studied the Class class, which represents class information, the System class, which provides system information, and other frequently used classes like Math and Random.
 
-열거형은 높은 타입 안전성을 제공하는 훌륭한 기능이다.
-단순히 열거형의 문법을 배우는 것이 아니라 본질적으로 열거형이 왜 필요한지 공부하였다. 그리고 열거형이 없던 시절 직접 구현했던 타입 안전 열거형 패턴도 구현해보았다.
+**Enumerations (Enums)**
 
-**중첩 클래스, 내부 클래스**
+Enums are an excellent feature that provides a high level of type safety. Rather than just learning the syntax, I studied the fundamental reasons why enums are necessary. I also tried implementing the "typesafe enum pattern" that was manually implemented in the days before enums existed.
 
-클래스 내부에 클래스를 두는 것을 중첩 클래스 또는 내부 클래스라 한다.
+**Nested and Inner Classes**
 
-**예외 처리**
+Placing a class within another class is known as a nested or inner class.
 
-자바에서 예외 처리 문법은 단순하지만 예외 처리가 왜 필요한지 공부하였다.
+**Exception Handling**
+
+While Java's exception handling syntax is simple, I studied why exception handling is necessary.

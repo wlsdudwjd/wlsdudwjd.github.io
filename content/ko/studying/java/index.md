@@ -8,7 +8,7 @@ date: '2025-10-12T00:00:00Z'
 
 links:
   - type: site
-    url: https://github.com/wlsdudwjd
+    url: https://github.com/wlsdudwjd/Java-Study
 
 tags:
   - JAVA
