@@ -1,0 +1,80 @@
+// 호버 기능 추가
+
+:root {
+  /* 로즈 계열 테마 색상 (Primary) */
+  --color-primary-main: #e11d48; /* 메인 로즈 (강조) */
+  --color-primary-light: #fca5a5; /* 밝은 로즈 (다크모드용) */
+
+  /* 하이라이트 배경 (투명도 적용) */
+  --color-primary-bg: rgba(225, 29, 72, 0.08); /* 라이트 모드용 */
+  --color-primary-bg-dark: rgba(252, 165, 165, 0.12); /* 다크 모드용 */
+
+  /* 기본 텍스트 색상*/
+  --color-text-default: #2b2b2b;
+  --color-text-dark-default: #e2e8f0;
+
+  /* UI 값*/
+  --ui-transition-speed: 150ms;
+  --ui-border-radius-link: 0.375rem;
+  --ui-border-radius-menu: 0.5rem;
+}
+
+/* --- 네비게이션 바 링크 스타일 --- */
+.navbar .navbar-nav .nav-link {
+  transition: color var(--ui-transition-speed) ease-in-out, 
+              background-color var(--ui-transition-speed) ease-in-out;
+  border-radius: var(--ui-border-radius-link);
+  color: var(--color-text-default);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--color-primary-main);
+  background-color: var(--color-primary-bg);
+  text-decoration: none;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: var(--color-primary-main);
+}
+
+/* --- 드롭다운 메뉴 스타일 --- */
+.dropdown-menu {
+  border-radius: var(--ui-border-radius-menu);
+}
+
+.dropdown-menu .dropdown-item {
+  transition: color var(--ui-transition-speed) ease-in-out, 
+              background-color var(--ui-transition-speed) ease-in-out, 
+              padding-left var(--ui-transition-speed) ease-in-out;
+  border-radius: var(--ui-border-radius-link);
+  color: var(--color-text-default);
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: var(--color-primary-main);
+  background-color: var(--color-primary-bg);
+  padding-left: 1rem;
+}
+
+/* --- 다크 모드 스타일 --- */
+.dark .navbar .navbar-nav .nav-link {
+  color: var(--color-text-dark-default);
+}
+
+.dark .navbar .navbar-nav .nav-link:hover,
+.dark .navbar .navbar-nav .nav-link:focus {
+  color: var(--color-primary-light);
+  background-color: var(--color-primary-bg-dark);
+}
+
+.dark .dropdown-menu .dropdown-item {
+  color: var(--color-text-dark-default);
+}
+
+.dark .dropdown-menu .dropdown-item:hover,
+.dark .dropdown-menu .dropdown-item:focus {
+  color: var(--color-primary-light);
+  background-color: var(--color-primary-bg-dark);
+}
