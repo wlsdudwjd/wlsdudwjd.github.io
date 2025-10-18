@@ -76,3 +76,19 @@
   color: var(--color-primary-light);
   background-color: var(--color-primary-bg-dark);
 }
+
+/* 양쪽정렬*/
+.post-content p,
+.page-content p,
+.content p,
+article p {
+  
+  /* 양쪽 정렬 적용 */
+  text-align: justify;
+  
+  /* [권장] 
+     양쪽 정렬 시 한글 단어가 깨지는 현상 (예: '프로그' '래밍')을
+     방지하고 단어 단위로 줄바꿈을 해줍니다.
+  */
+  word-break: keep-all; 
+}
