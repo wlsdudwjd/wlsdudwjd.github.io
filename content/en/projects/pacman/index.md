@@ -6,8 +6,8 @@ links:
     url: https://github.com/wlsdudwjd/pacman
 tags:
   - python
-  - HugoBlox
-  - Markdown
+  - AI
+  - Pacman
 
 featured: true
 

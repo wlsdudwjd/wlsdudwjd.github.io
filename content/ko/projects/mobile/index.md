@@ -9,6 +9,11 @@ tags:
   - Phonebook
   - Java
 
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%EB%82%98%EB%AC%B4-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%9C%84%EC%97%90-%EC%95%89%EC%95%84-%EC%9E%88%EB%8A%94-%ED%9C%B4%EB%8C%80%ED%8F%B0-kbpn6F0-Ygs)'
+  focal_point: ""
+  preview_only: false 
+
 featured: true
 
 share: false

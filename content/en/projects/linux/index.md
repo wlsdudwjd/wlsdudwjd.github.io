@@ -10,6 +10,11 @@ tags:
   - C
   - TCP
   - Chat
+ 
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%EC%B4%88%EB%A1%9D%EC%83%89-%ED%91%9C%EB%A9%B4%EC%97%90-%EA%B5%AC%EA%B2%A8%EC%A7%84-%EB%85%B8%EB%9E%80%EC%83%89-%EC%A2%85%EC%9D%B4-%EC%84%B8-%EC%9E%A5%EC%9D%B4-%EB%85%B8%EB%9E%80%EC%83%89-%EC%A4%84%EC%9D%B4-%EA%B7%B8%EC%96%B4%EC%A7%84-%EC%A2%85%EC%9D%B4%EB%A1%9C-%EB%91%98%EB%9F%AC%EC%8B%B8%EC%97%AC-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-V5vqWC9gyEU)'
+  focal_point: ""
+  preview_only: false   
 
 featured: true
 
