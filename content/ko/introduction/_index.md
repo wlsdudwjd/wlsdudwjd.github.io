@@ -83,7 +83,7 @@ sections:
           - projects
         featured_only: false
     design:
-      view: compact
+      view: card
       columns: 3
   # - block: collection
   #   content:
