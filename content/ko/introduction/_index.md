@@ -73,6 +73,18 @@ sections:
     design:
       view: article-grid
       columns: 3
+
+  - block: collection
+    id: projects
+    content:
+      title: 프로젝트 바로가기
+      filters:
+        folders:
+          - projects
+        featured_only: false
+    design:
+      view: compact
+      columns: 3
   # - block: collection
   #   content:
   #     title: Recent Publications
