@@ -1,5 +1,5 @@
 ---
-title: Pacman
+title: 팩맨
 date: 2025-03-01
 links:
   - type: site

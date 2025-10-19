@@ -37,7 +37,6 @@ header:
     logo:
       #text: '정진영의 포트폴리오'
       filename: 'icon.png'
-      url: 'main/'
 
 # Site footer
 footer:
