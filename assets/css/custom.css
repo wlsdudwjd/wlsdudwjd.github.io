@@ -1,13 +1,10 @@
 :root {
-  /* 로즈 계열 테마 색상 (Primary) */
   --color-primary-main: #e11d48; /* 메인 로즈 (강조) */
   --color-primary-light: #fca5a5; /* 밝은 로즈 (다크모드용) */
 
-  /* 하이라이트 배경 (투명도 적용) */
   --color-primary-bg: rgba(225, 29, 72, 0.08); /* 라이트 모드용 */
   --color-primary-bg-dark: rgba(252, 165, 165, 0.12); /* 다크 모드용 */
 
-  /* 기본 텍스트 색상*/
   --color-text-default: #2b2b2b;
   --color-text-dark-default: #e2e8f0;
 
@@ -18,61 +15,35 @@
 }
 
 /* 호버 기능 추가*/
-.navbar .navbar-nav .nav-link {
-  transition: color var(--ui-transition-speed) ease-in-out, 
-              background-color var(--ui-transition-speed) ease-in-out;
-  border-radius: var(--ui-border-radius-link);
-  color: var(--color-text-default);
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: var(--color-primary-main) !important;      /* 로즈색 글자 */
+  background-color: var(--color-primary-bg) !important; /* 투명 로즈색 배경 */
+  border-radius: var(--ui-border-radius-link);    /* 모서리 둥글게 */
+  text-decoration: none !important;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link:focus {
-  color: var(--color-primary-main) !important;
-  background-color: var(--color-primary-bg) !important;
-  text-decoration: none !important;
+/* * 2. 다크 모드 (시스템 감지) 호버 스타일 
+ */
+@media (prefers-color-scheme: dark) {
+  .navbar .navbar-nav .nav-link:hover,
+  .navbar .navbar-nav .nav-link:focus,
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    color: var(--color-primary-light) !important;    /* 밝은 로즈색 글자 */
+    background-color: var(--color-primary-bg-dark) !important; /* 투명 밝은 로즈색 배경 */
+  }
 }
 
 .navbar .navbar-nav .nav-link.active {
   color: var(--color-primary-main) !important;
 }
-
-html.dark .navbar .navbar-nav .nav-link {
-  color: var(--color-text-dark-default);
-}
-
-html.dark .navbar .navbar-nav .nav-link:hover,
-html.dark .navbar .navbar-nav .nav-link:focus {
-  color: var(--color-primary-light) !important;
-  background-color: var(--color-primary-bg-dark) !important;
-}
-
-.dropdown-menu {
-  border-radius: var(--ui-border-radius-menu);
-}
-
-.dropdown-menu .dropdown-item {
-  transition: color var(--ui-transition-speed) ease-in-out, 
-              background-color var(--ui-transition-speed) ease-in-out, 
-              padding-left var(--ui-transition-speed) ease-in-out;
-  border-radius: var(--ui-border-radius-link);
-  color: var(--color-text-default);
-}
-
-.navbar .dropdown-menu .dropdown-item:hover,
-.navbar .dropdown-menu .dropdown-item:focus {
-  color: var(--color-primary-main) !important;
-  background-color: var(--color-primary-bg) !important;
-  padding-left: 1rem !important;
-}
-
-html.dark .dropdown-menu .dropdown-item {
-  color: var(--color-text-dark-default);
-}
-
-html.dark .navbar .dropdown-menu .dropdown-item:hover,
-html.dark .navbar .dropdown-menu .dropdown-item:focus {
-  color: var(--color-primary-light) !important;
-  background-color: var(--color-primary-bg-dark) !important;
+@media (prefers-color-scheme: dark) {
+  .navbar .navbar-nav .nav-link.active {
+    color: var(--color-primary-light) !important;
+  }
 }
 
 /* 양쪽정렬*/
