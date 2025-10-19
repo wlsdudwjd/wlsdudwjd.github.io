@@ -19,6 +19,10 @@ image:
   preview_only: false
 
 featured: true
+
+share: false
+
+reading_time: false
 ---
 
 

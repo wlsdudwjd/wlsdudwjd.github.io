@@ -19,6 +19,10 @@ image:
   preview_only: false
 
 featured: true
+
+share: false
+
+reading_time: false
 ---
 
 자바의 문법과 기능을 단순히 알기만 하는 것이 아니라, 그 기능이 왜 필요하고 어떻게 실무에 적용할 수 있는지에 대해 깊이 있게 탐구하기 위해 공부를 시작하였다.

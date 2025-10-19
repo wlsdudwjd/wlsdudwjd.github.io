@@ -22,6 +22,7 @@ featured: true
 
 share: false
 
+reading_time: false
 ---
 
 ##From Servlets to Spring MVC: Learning the Evolution of Java Web Development
