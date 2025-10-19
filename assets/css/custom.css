@@ -17,7 +17,7 @@
   --ui-border-radius-menu: 0.5rem;
 }
 
-/* --- 네비게이션 바 링크 스타일 --- */
+/* 호버 기능 추가*/
 .navbar .navbar-nav .nav-link {
   transition: color var(--ui-transition-speed) ease-in-out, 
               background-color var(--ui-transition-speed) ease-in-out;
@@ -27,16 +27,25 @@
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus {
-  color: var(--color-primary-main);
-  background-color: var(--color-primary-bg);
-  text-decoration: none;
+  color: var(--color-primary-main) !important;
+  background-color: var(--color-primary-bg) !important;
+  text-decoration: none !important;
 }
 
 .navbar .navbar-nav .nav-link.active {
-  color: var(--color-primary-main);
+  color: var(--color-primary-main) !important;
 }
 
-/* --- 드롭다운 메뉴 스타일 --- */
+html.dark .navbar .navbar-nav .nav-link {
+  color: var(--color-text-dark-default);
+}
+
+html.dark .navbar .navbar-nav .nav-link:hover,
+html.dark .navbar .navbar-nav .nav-link:focus {
+  color: var(--color-primary-light) !important;
+  background-color: var(--color-primary-bg-dark) !important;
+}
+
 .dropdown-menu {
   border-radius: var(--ui-border-radius-menu);
 }
@@ -51,30 +60,19 @@
 
 .navbar .dropdown-menu .dropdown-item:hover,
 .navbar .dropdown-menu .dropdown-item:focus {
-  color: var(--color-primary-main);
-  background-color: var(--color-primary-bg);
-  padding-left: 1rem;
+  color: var(--color-primary-main) !important;
+  background-color: var(--color-primary-bg) !important;
+  padding-left: 1rem !important;
 }
 
-/* --- 다크 모드 스타일 --- */
-.dark .navbar .navbar-nav .nav-link {
+html.dark .dropdown-menu .dropdown-item {
   color: var(--color-text-dark-default);
 }
 
-.dark .navbar .navbar-nav .nav-link:hover,
-.dark .navbar .navbar-nav .nav-link:focus {
-  color: var(--color-primary-light);
-  background-color: var(--color-primary-bg-dark);
-}
-
-.dark .dropdown-menu .dropdown-item {
-  color: var(--color-text-dark-default);
-}
-
-.dark .navbar .dropdown-menu .dropdown-item:hover,
-.dark .navbar .dropdown-menu .dropdown-item:focus {
-  color: var(--color-primary-light);
-  background-color: var(--color-primary-bg-dark);
+html.dark .navbar .dropdown-menu .dropdown-item:hover,
+html.dark .navbar .dropdown-menu .dropdown-item:focus {
+  color: var(--color-primary-light) !important;
+  background-color: var(--color-primary-bg-dark) !important;
 }
 
 /* 양쪽정렬*/
