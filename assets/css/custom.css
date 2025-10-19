@@ -85,18 +85,12 @@ article p {
   
   /* 양쪽 정렬 적용 */
   text-align: justify;
-  
-  /* [권장] 
-     양쪽 정렬 시 한글 단어가 깨지는 현상 (예: '프로그' '래밍')을
-     방지하고 단어 단위로 줄바꿈을 해줍니다.
-  */
   word-break: keep-all; 
 }
 
 body {
-  /* 1. 기본 상태 (라이트 모드) 배경 및 글자색 */
-  /* <html> 태그에 class="dark"가 없을 때 적용됩니다. */
-  background-color: #b1b1b1;
+  /*기본 상태 (라이트 모드) 배경 및 글자색 */
+  background-color: #f7f7f7;
   color: #2b2b2b;
   
   /* 부드러운 전환 효과 */
@@ -106,6 +100,6 @@ body {
 
 /* 2. 다크 모드일 때 */
 html.dark body {
-  background-color: #893d3d;
+  background-color: #121212;
   color: #e2e8f0;
 }
