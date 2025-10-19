@@ -93,18 +93,19 @@ article p {
   word-break: keep-all; 
 }
 
-body.dark {
-  /* 라이트 모드 (기본) 배경 및 글자색 */
-  background-color: #fafafa; /* 매우 밝은 회색 (흰색은 #ffffff) */
-  color: #2b2b2b;           /* 기본 글자색 (기존 코드와 통일) */
+body {
+  /* 1. 기본 상태 (라이트 모드) 배경 및 글자색 */
+  /* <html> 태그에 class="dark"가 없을 때 적용됩니다. */
+  background-color: #b1b1b1;
+  color: #2b2b2b;
   
-  /* 다크 모드 전환 시 부드러운 효과 */
+  /* 부드러운 전환 효과 */
   transition: background-color 0.15s ease-in-out, 
               color 0.15s ease-in-out;
 }
 
-body {
-  /* 다크 모드 배경 및 글자색 */
-  background-color: #ea2b2b; /* 매우 어두운 회색 (차콜) */
-  color: #e2e8f0;           /* 기본 글자색 (기존 코드와 통일) */
+/* 2. 다크 모드일 때 */
+html.dark body {
+  background-color: #893d3d;
+  color: #e2e8f0;
 }
