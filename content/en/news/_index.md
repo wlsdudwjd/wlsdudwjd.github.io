@@ -1,5 +1,5 @@
 ---
-title: Recent & Upcoming Talks
+title: IT News
 cms_exclude: true
 #url: talk
 
