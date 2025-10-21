@@ -30,13 +30,13 @@ title: 연락처
     <span class="contact-link__icon"><i class="fa-brands fa-discord"></i></span>
     <span class="contact-link__body">
       <span class="contact-link__label">Discord</span>
-      <span class="contact-link__value">wlsdudwjd</span>
+      <span class="contact-link__value">정진영</span>
     </span>
     <span class="contact-link__cta">친구 추가</span>
   </a>
 
   <a class="contact-link" href="tel:+821053511302">
-    <span class="contact-link__icon"><i class="fa-solid fa-phone"></i></span>
+    <span class="contact-link__icon"><i class="fa-brands fa-whatsapp"></i></span>
     <span class="contact-link__body">
       <span class="contact-link__label">Phone</span>
       <span class="contact-link__value">010-5351-1302</span>
