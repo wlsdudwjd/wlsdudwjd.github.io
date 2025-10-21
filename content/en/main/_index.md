@@ -78,7 +78,8 @@ sections:
         folders:
           - events
     design:
-      view: card
+      view: talk-overlay
+      columns: 3
 #   - block: collection
 #     id: news
 #     content:
