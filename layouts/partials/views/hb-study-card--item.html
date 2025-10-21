@@ -41,29 +41,17 @@
         <div class="hb-card-study-heading">
           <span class="hb-card-study-badge">{{ $badgeText }}</span>
           <h3 class="hb-card-title">{{ $item.Title }}</h3>
-          {{ with $item.Date }}
-            <time class="hb-card-date" datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006.01.02" }}</time>
-          {{ end }}
         </div>
       </div>
       <div class="hb-card-body">
         <p class="hb-card-summary">{{ $summary }}</p>
-        <div class="hb-card-meta">
-          {{ with $item.Params.tags }}
-            <ul class="hb-card-tags">
-              {{ range first 3 . }}
-                <li class="hb-card-tag">#{{ . }}</li>
-              {{ end }}
-            </ul>
-          {{ end }}
-        </div>
-        <div class="hb-card-study-progress">
-          <span class="hb-card-progress-dot"></span>
-          <span class="hb-card-progress-dot"></span>
-          <span class="hb-card-progress-dot"></span>
-          <span class="hb-card-progress-dot"></span>
-          <span class="hb-card-progress-dot"></span>
-        </div>
+        {{ with $item.Params.tags }}
+          <div class="hb-card-study-tags">
+            {{ range first 3 . }}
+              <span class="hb-card-study-tag">#{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     </a>
   </article>
