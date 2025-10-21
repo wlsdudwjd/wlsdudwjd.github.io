@@ -103,7 +103,7 @@ sections:
         folders:
           - events
     design:
-      view: talk-overlay
+      view: custom_card
       columns: 3
 #   - block: collection
 #     id: news
