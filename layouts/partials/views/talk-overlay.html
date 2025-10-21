@@ -1,0 +1,14 @@
+{{- /* Compatibility wrapper so Hugo Blox won't warn when looking for talk-overlay.html */ -}}
+{{- $context := . -}}
+{{- $items := .items -}}
+{{- if not $items }}{{ $items = .Items }}{{ end -}}
+{{- if not $items }}{{ $items = .pages }}{{ end -}}
+{{- if not $items }}{{ $items = .Pages }}{{ end -}}
+{{- if not $items }}{{ $items = slice }}{{ end -}}
+{{- $config := .config | default dict -}}
+{{- $page := .page -}}
+{{- partial "views/talk-overlay--start" (dict "config" $config "page" $page) -}}
+{{- range $index, $item := $items -}}
+  {{- partial "views/talk-overlay--item" (dict "item" $item "index" $index "config" $config "page" $page) -}}
+{{- end -}}
+{{- partial "views/talk-overlay--end" (dict "config" $config "page" $page) -}}
