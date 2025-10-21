@@ -101,7 +101,7 @@ sections:
       title: IT 뉴스
       filters:
         folders:
-          - events
+          - news
     design:
       view: custom_card
       columns: 3

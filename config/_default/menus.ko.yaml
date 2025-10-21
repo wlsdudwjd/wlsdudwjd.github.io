@@ -17,15 +17,18 @@ main:
   - name: 프로젝트
     url: projects/
     weight: 40
+  - name: 뉴스
+    url: news/
+    weight: 50
   - name: 연락
     identifier: contact
     url: contact/
-    weight: 50
+    weight: 60
   - name: 연락처
     parent: contact
     url: contact/contact/
-    weight: 51
+    weight: 61
   - name: 오시는 길
     parent: contact
     url: contact/map/
-    weight: 52
+    weight: 62

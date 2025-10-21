@@ -76,7 +76,7 @@ sections:
       title: IT News
       filters:
         folders:
-          - events
+          - news
     design:
       view: custom_card
       columns: 3
