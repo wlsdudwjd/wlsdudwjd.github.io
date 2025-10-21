@@ -98,7 +98,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: 뭐하지
+      title: IT 뉴스
       filters:
         folders:
           - events
