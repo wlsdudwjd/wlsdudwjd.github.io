@@ -23,12 +23,12 @@ main:
   - name: Contact
     identifier: contact
     url: contact/
-    weight: 50
+    weight: 60
   - name: Contact Information
     parent: contact
     url: contact/contact/
-    weight: 51
+    weight: 61
   - name: Map
     parent: contact
     url: contact/map/
-    weight: 52
+    weight: 62
