@@ -1,0 +1,6 @@
+{{- /* Wrapper for the custom card view to keep spacing consistent */ -}}
+{{- $config := .config | default dict -}}
+{{- $columns := 1 -}}
+{{- with or ($config.columns) ($config.Columns) }}{{ $columns = . }}{{ end -}}
+<div class="hb-custom-card-view" data-columns="{{ $columns }}">
+  <div class="hb-custom-card-view__inner">
