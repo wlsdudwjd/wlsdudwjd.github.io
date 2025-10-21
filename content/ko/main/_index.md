@@ -71,7 +71,8 @@ sections:
           - studying
         featured_only: false
     design:
-      view: hb-study-card
+      view: article-grid
+      columns: 3
 
   - block: collection
     id: projects
@@ -82,7 +83,8 @@ sections:
           - projects
         featured_only: false
     design:
-      view: hb-project-card
+      view: card
+      columns: 3
   # - block: collection
   #   content:
   #     title: Recent Publications
