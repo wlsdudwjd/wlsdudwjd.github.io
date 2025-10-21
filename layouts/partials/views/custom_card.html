@@ -8,16 +8,6 @@
   {{- $target = "target=\"_blank\" rel=\"noopener\"" -}}
 {{- end -}}
 
-{{/* Determine summary text. */}}
-{{- $summary := "" -}}
-{{- if $item.Params.summary -}}
-  {{- $summary = $item.Params.summary | markdownify | emojify -}}
-{{- else if $item.Params.abstract -}}
-  {{- $summary = $item.Params.abstract | markdownify | emojify | truncate (site.Params.abstract_length | default 135) -}}
-{{- else if $item.Summary -}}
-  {{- $summary = $item.Summary -}}
-{{- end -}}
-
 {{- $resource := partial "blox-core/functions/get_featured_image.html" $item -}}
 {{- $primary_tag := "" -}}
 {{- with $item.Params.tags -}}
@@ -81,10 +71,6 @@
     <h4 class="hb-custom-card__title">
       <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title | markdownify | emojify }}</a>
     </h4>
-
-    {{- with $summary -}}
-      <p class="hb-custom-card__summary">{{ . }}</p>
-    {{- end -}}
 
     <div class="hb-custom-card__footer">
       {{- if $has_attachments -}}
