@@ -73,12 +73,12 @@ sections:
   - block: collection
     id: talks
     content:
-      title: hmm
+      title: IT News
       filters:
         folders:
           - events
     design:
-      view: talk-overlay
+      view: custom_card
       columns: 3
 #   - block: collection
 #     id: news
