@@ -3,6 +3,8 @@ title: Contact
 
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 ## If you have any questions, feel free to reach out anytime.
 
 <div class="contact-links">

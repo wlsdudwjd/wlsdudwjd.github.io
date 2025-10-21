@@ -1,7 +1,9 @@
 ---
 title: 연락처
-
 ---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 ## 어떤 문의든 편하게 연락 주세요.
 
