@@ -1,0 +1,8 @@
+{{- /* Wrapper for the project card view */ -}}
+{{- $config := .config | default dict -}}
+{{- $columns := 0 -}}
+{{- with or ($config.columns) ($config.Columns) -}}
+  {{- $columns = . -}}
+{{- end -}}
+<div class="hb-project-card-view" {{ if gt $columns 0 }}data-columns="{{ $columns }}"{{ end }}>
+  <div class="hb-project-card-view__inner">

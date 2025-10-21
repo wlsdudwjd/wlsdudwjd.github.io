@@ -1,0 +1,112 @@
+{{- $item := .item -}}
+{{- $config := .config | default dict -}}
+{{- $has_attachments := partial "functions/has_attachments" $item -}}
+
+{{- $link := $item.RelPermalink -}}
+{{- $target := "" -}}
+{{- if $item.Params.external_link -}}
+  {{- $link = $item.Params.external_link -}}
+  {{- $target = "target=\"_blank\" rel=\"noopener\"" -}}
+{{- end -}}
+
+{{- $summary := "" -}}
+{{- if $item.Params.summary -}}
+  {{- $summary = $item.Params.summary | markdownify | emojify | plainify -}}
+{{- else if $item.Params.abstract -}}
+  {{- $summary = $item.Params.abstract | markdownify | emojify | plainify -}}
+{{- else if $item.Summary -}}
+  {{- $summary = $item.Summary | plainify -}}
+{{- end -}}
+{{- if and $summary (gt (len $summary) 160) -}}
+  {{- $summary = (print (substr $summary 0 157) "…") -}}
+{{- end -}}
+
+{{- $resource := partial "blox-core/functions/get_featured_image.html" $item -}}
+{{- $tags := slice -}}
+{{- with $item.Params.tags -}}
+  {{- $tags = . -}}
+{{- end -}}
+{{- $primary_tag := cond (gt (len $tags) 0) (index $tags 0) "" -}}
+
+{{- $tech_tags := slice -}}
+{{- range $idx, $tag := $tags -}}
+  {{- if or (ne $idx 0) (eq $primary_tag "") -}}
+    {{- $tech_tags = $tech_tags | append $tag -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $date := $item.Date -}}
+{{- if not $date -}}
+  {{- $date = $item.PublishDate -}}
+{{- end -}}
+{{- if not $date -}}
+  {{- $date = $item.Lastmod -}}
+{{- end -}}
+{{- $date_display := "" -}}
+{{- if $date -}}
+  {{- $date_display = $date.Format (site.Params.date_format | default "Jan 2, 2006") -}}
+{{- end -}}
+
+{{- $cta_text := (or ($config.cta_text) ($config.CTA_text) "View project") -}}
+
+{{- $placeholder := "Project" -}}
+{{- with $item.Title | plainify | strings.TrimSpace -}}
+  {{- if gt (len .) 0 -}}
+    {{- $placeholder = upper (substr . 0 1) -}}
+  {{- end -}}
+{{- end -}}
+
+<article class="hb-project-card">
+  <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hb-project-card__media">
+    {{- with $resource -}}
+      {{- $image := . -}}
+      {{- if eq (printf "%T" $image) "*resources.Image" -}}
+        {{- $processed := $image.Fill "800x520 center" -}}
+        <img src="{{ $processed.RelPermalink }}" height="{{ $processed.Height }}" width="{{ $processed.Width }}" alt="{{ $item.Title }}" loading="lazy">
+      {{- else -}}
+        <img src="{{ $image.RelPermalink }}" alt="{{ $item.Title }}" loading="lazy">
+      {{- end -}}
+    {{- else -}}
+      <span class="hb-project-card__media--placeholder">{{ $placeholder }}</span>
+    {{- end -}}
+    {{- with $primary_tag -}}
+      <span class="hb-project-card__badge">{{ . }}</span>
+    {{- end -}}
+  </a>
+
+  <div class="hb-project-card__body">
+    {{- if or $date $tech_tags -}}
+      <div class="hb-project-card__meta">
+        {{- if $date_display -}}
+          <span class="hb-project-card__meta-date">{{ $date_display }}</span>
+        {{- end -}}
+        {{- if gt (len $tech_tags) 0 -}}
+          <ul class="hb-project-card__tags">
+            {{- range $tech_tags -}}
+              <li>{{ . }}</li>
+            {{- end -}}
+          </ul>
+        {{- end -}}
+      </div>
+    {{- end -}}
+
+    <h3 class="hb-project-card__title">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title | markdownify | emojify }}</a>
+    </h3>
+
+    {{- with $summary -}}
+      <p class="hb-project-card__summary">{{ . }}</p>
+    {{- end -}}
+  </div>
+
+  <div class="hb-project-card__footer">
+    {{- if $has_attachments -}}
+      <div class="hb-project-card__links">
+        {{- partial "page_links" (dict "page" $item "is_list" 1) -}}
+      </div>
+    {{- end -}}
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hb-project-card__cta">
+      {{ $cta_text }} →
+    </a>
+  </div>
+</article>
