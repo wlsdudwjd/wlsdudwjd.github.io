@@ -1,0 +1,33 @@
+{{- $page := .item -}}
+{{- if not $page -}}
+  {{- return -}}
+{{- end -}}
+{{- $image := or ($page.Resources.GetMatch "featured*") ($page.Resources.GetMatch "cover*") -}}
+{{- $imageURL := "" -}}
+{{- if $image }}{{ $imageURL = $image.RelPermalink }}{{ end -}}
+{{- $event := $page.Params.event -}}
+{{- $location := $page.Params.location -}}
+{{- $summary := cond (ne $page.Summary "") $page.Summary $page.Params.summary -}}
+{{- $dateStr := "" -}}
+{{- with $page.Date }}{{ $dateStr = .Format "2006.01.02" }}{{ end -}}
+<a class="hb-talk-overlay-card" href="{{ $page.RelPermalink }}">
+  <div class="hb-talk-overlay-card__image{{ if not $imageURL }} hb-talk-overlay-card__image--empty{{ end }}"{{ if $imageURL }} style="background-image: url('{{ $imageURL }}');"{{ end }}></div>
+  <div class="hb-talk-overlay-card__overlay">
+    {{- with $event }}
+      <p class="hb-talk-overlay-card__event">{{ . }}</p>
+    {{- end }}
+    <h3 class="hb-talk-overlay-card__title">{{ $page.Title }}</h3>
+    <div class="hb-talk-overlay-card__meta">
+      {{- if $dateStr }}
+        <span>{{ $dateStr }}</span>
+      {{- end }}
+      {{- with $location }}
+        {{- if and $dateStr . }}<span aria-hidden="true">·</span>{{ end -}}
+        <span>{{ . }}</span>
+      {{- end }}
+    </div>
+    {{- with $summary }}
+      <p class="hb-talk-overlay-card__summary">{{ . | plainify | truncate 80 }}</p>
+    {{- end }}
+  </div>
+</a>

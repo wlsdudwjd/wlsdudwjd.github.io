@@ -1,0 +1,5 @@
+{{- $config := .config | default dict -}}
+{{- $columns := 3 -}}
+{{- with $config.columns }}{{ $columns = . }}{{ end -}}
+{{- with $config.Columns }}{{ $columns = . }}{{ end -}}
+<div class="hb-talk-overlay-grid" data-columns="{{ $columns }}">
