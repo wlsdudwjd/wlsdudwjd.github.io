@@ -47,8 +47,6 @@
   {{- $date_display = $date.Format (site.Params.date_format | default "Jan 2, 2006") -}}
 {{- end -}}
 
-{{- $cta_text := (or ($config.cta_text) ($config.CTA_text) "View project") -}}
-
 {{- $placeholder := "Project" -}}
 {{- with $item.Title | plainify | strings.TrimSpace -}}
   {{- if gt (len .) 0 -}}
@@ -97,16 +95,12 @@
     {{- with $summary -}}
       <p class="hb-project-card__summary">{{ . }}</p>
     {{- end -}}
-  </div>
 
-  <div class="hb-project-card__footer">
     {{- if $has_attachments -}}
       <div class="hb-project-card__links">
         {{- partial "page_links" (dict "page" $item "is_list" 1) -}}
       </div>
     {{- end -}}
-    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hb-project-card__cta">
-      {{ $cta_text }} →
-    </a>
   </div>
+
 </article>
