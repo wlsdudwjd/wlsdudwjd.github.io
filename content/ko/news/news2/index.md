@@ -1,6 +1,6 @@
 ---
 title: 애플, ‘iOS AI’ 전격 발표… “앱 중심에서 에이전트 중심으로” 패러다임 대전환
-date: 2025-11-02
+date: 2025-10-10
 links:
   - type: site
     url: https://example.com/apple-ios-ai

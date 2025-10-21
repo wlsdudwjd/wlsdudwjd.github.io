@@ -1,5 +1,5 @@
 ---
-title: Recent & Upcoming Talks
+title: IT 뉴스
 cms_exclude: true
 #url: talk
 

@@ -1,6 +1,6 @@
 ---
 title: 네이버, 감정형 AI 비서 ‘NAVER Mate’ 공개 임박…국내 검색 생태계 지각 변동 예고
-date: 2025-10-22
+date: 2025-10-20
 links:
   - type: site
     url: https://example.com/naver-mate
