@@ -45,8 +45,7 @@ sections:
           - studying
         featured_only: false
     design:
-      view: article-grid
-      columns: 3
+      view: hb-study-card
 
   - block: collection
     id: projects
@@ -57,8 +56,7 @@ sections:
           - projects
         featured_only: false
     design:
-      view: card
-      columns: 3
+      view: hb-project-card
 
   # - block: collection
   #   content:

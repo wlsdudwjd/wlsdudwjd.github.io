@@ -1,0 +1,70 @@
+{{ $lang := "en" }}
+{{ with .page }}
+  {{ if .Lang }}
+    {{ $lang = .Lang }}
+  {{ else if .Site }}
+    {{ with .Site.Language.Lang }}
+      {{ $lang = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $ctaText := cond (eq $lang "ko") "자세히 보기" "View details" }}
+{{ $pages := .pages }}
+{{ if gt (len $pages) 0 }}
+<section class="hb-card-view hb-card-view--projects">
+  <div class="hb-card-grid">
+    {{ range $idx, $item := $pages }}
+      {{ $cover := $item.Resources.GetMatch "featured*" }}
+      {{ if not $cover }}
+        {{ $cover = $item.Resources.GetMatch "*feature*" }}
+      {{ end }}
+      {{ if not $cover }}
+        {{ $cover = $item.Resources.GetMatch "cover*" }}
+      {{ end }}
+      {{ $summaryScratch := newScratch }}
+      {{ $summaryScratch.Set "summary" ($item.Params.summary | plainify) }}
+      {{ if eq ($summaryScratch.Get "summary") "" }}
+        {{ $summaryScratch.Set "summary" ($item.Summary | plainify) }}
+      {{ end }}
+      {{ if eq ($summaryScratch.Get "summary") "" }}
+        {{ $summaryScratch.Set "summary" ($item.Plain | plainify) }}
+      {{ end }}
+      {{ $summary := ($summaryScratch.Get "summary") | truncate 120 }}
+      <article class="hb-card-item hb-card-item--project">
+        <div class="hb-card-inner">
+          <a class="hb-card-link" href="{{ $item.RelPermalink }}">
+            <div class="hb-card-thumb">
+              {{ with $cover }}
+                <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" loading="lazy">
+              {{ else }}
+                <div class="hb-card-thumb--placeholder" aria-hidden="true">
+                  <span class="hb-card-placeholder-icon">🚀</span>
+                </div>
+              {{ end }}
+            </div>
+            <div class="hb-card-body">
+              <h3 class="hb-card-title">{{ $item.Title }}</h3>
+              <p class="hb-card-summary">{{ $summary }}</p>
+              {{ with $item.Params.links }}
+                <ul class="hb-card-links">
+                  {{ range . }}
+                    {{ if .url }}
+                      <li>
+                        <span class="hb-card-link-label">{{ .type | title }}</span>
+                        <a class="hb-card-link-url" href="{{ .url | safeURL }}" target="_blank" rel="noopener">{{ .url }}</a>
+                      </li>
+                    {{ end }}
+                  {{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          </a>
+          <div class="hb-card-footer">
+            <a class="hb-card-button" href="{{ $item.RelPermalink }}">{{ $ctaText }}</a>
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
